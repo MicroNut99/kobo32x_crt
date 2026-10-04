@@ -1,0 +1,441 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+hdr              0x0000000000000000 0x0000000000000038 xr
+sdram            0x0000000006000000 0x0000000000040000 xw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.header         0x0000000000000000       0x38
+                0x0000000000000000                __header_start = .
+ *(.header)
+ .header        0x0000000000000000       0x38 crt0.o
+                0x0000000000000038                __header_end = .
+                0x0000000000000038                __header_size = SIZEOF (.header)
+
+.text           0x0000000006000000     0xa1d4 load address 0x0000000000000038
+                0x0000000006000000                __text_start = .
+ *(.text)
+ .text          0x0000000006000000      0x820 crt0.o
+                0x0000000006000760                fast_memcpy
+                0x0000000006000770                CacheControl
+                0x0000000006000780                SetSH2SR
+                0x0000000006000818                start
+ .text          0x0000000006000820        0x0 sh2_main.o
+ *(.text.*)
+ .text.flip_wait
+                0x0000000006000820       0x24 sh2_main.o
+ .text.hdr32    0x0000000006000844       0x30 sh2_main.o
+ .text.init_buffer
+                0x0000000006000874       0x48 sh2_main.o
+ .text.draw_playfield
+                0x00000000060008bc      0x194 sh2_main.o
+ .text.fx_info  0x0000000006000a50       0x58 sh2_main.o
+ .text.fx_len   0x0000000006000aa8       0x28 sh2_main.o
+ .text.draw_rle
+                0x0000000006000ad0      0x104 sh2_main.o
+ .text.put_caption
+                0x0000000006000bd4       0xd4 sh2_main.o
+ .text.dec      0x0000000006000ca8       0x44 sh2_main.o
+ .text.ship_step
+                0x0000000006000cec      0x184 sh2_main.o
+ .text.demo_start
+                0x0000000006000e70       0xb4 sh2_main.o
+ .text.shot_single
+                0x0000000006000f24       0xe8 sh2_main.o
+ .text.speed2dir16
+                0x000000000600100c       0xac sh2_main.o
+ .text.enemy_new
+                0x00000000060010b8      0x18c sh2_main.o
+ .text.spawn_wave
+                0x0000000006001244      0x168 sh2_main.o
+ .text.cores_left
+                0x00000000060013ac       0x70 sh2_main.o
+ .text.respawn  0x000000000600141c       0xcc sh2_main.o
+ .text.draw_sprite
+                0x00000000060014e8       0x90 sh2_main.o
+ .text.bits2tile
+                0x0000000006001578       0x74 sh2_main.o
+ .text.font_text
+                0x00000000060015ec      0x11c sh2_main.o
+ .text.sfx      0x0000000006001708       0x98 sh2_main.o
+ .text.fire_shot2
+                0x00000000060017a0      0x164 sh2_main.o
+ .text.font_len
+                0x0000000006001904       0x88 sh2_main.o
+ .text.font_center
+                0x000000000600198c       0x34 sh2_main.o
+ .text.dir_free
+                0x00000000060019c0       0x9c sh2_main.o
+ .text.wait_cmd
+                0x0000000006001a5c       0x80 sh2_main.o
+ .text.set_text
+                0x0000000006001adc       0x50 sh2_main.o
+ .text.music    0x0000000006001b2c       0x24 sh2_main.o
+ .text.save_game
+                0x0000000006001b50       0xf4 sh2_main.o
+ .text.copy_bank
+                0x0000000006001c44       0xc4 sh2_main.o
+ .text.draw_bolts
+                0x0000000006001d08      0x114 sh2_main.o
+ .text.ship_die
+                0x0000000006001e1c       0xc0 sh2_main.o
+ .text.enemy_die
+                0x0000000006001edc      0x1c0 sh2_main.o
+ .text.draw_logo
+                0x000000000600209c       0x78 sh2_main.o
+ .text.draw_hs_table
+                0x0000000006002114      0x134 sh2_main.o
+ .text.demos_step
+                0x0000000006002248      0x27c sh2_main.o
+ .text.build_level
+                0x00000000060024c4      0x944 sh2_main.o
+ .text.enemies_step
+                0x0000000006002e08      0xd74 sh2_main.o
+ .text.bolts_step
+                0x0000000006003b7c      0x50c sh2_main.o
+ .text.draw_enemies
+                0x0000000006004088      0x798 sh2_main.o
+ .text.pri_vbi_handler
+                0x0000000006004820        0x4 sh2_main.o
+                0x0000000006004820                pri_vbi_handler
+ .text.pri_cmd_handler
+                0x0000000006004824       0x10 sh2_main.o
+                0x0000000006004824                pri_cmd_handler
+ .text.sec_cmd_handler
+                0x0000000006004834       0x10 sh2_main.o
+                0x0000000006004834                sec_cmd_handler
+ .text.sec_dma1_handler
+                0x0000000006004844        0x4 sh2_main.o
+                0x0000000006004844                sec_dma1_handler
+ .text.pwm_post
+                0x0000000006004848       0x28 sh2_main.o
+                0x0000000006004848                pwm_post
+ .text.secondary
+                0x0000000006004870      0x1d8 sh2_main.o
+                0x0000000006004870                secondary
+ .text.memset   0x0000000006004a48       0x18 sh2_main.o
+                0x0000000006004a48                memset
+ .text.memmove  0x0000000006004a60       0x40 sh2_main.o
+                0x0000000006004a60                memmove
+ .text.memcpy   0x0000000006004aa0       0x18 sh2_main.o
+                0x0000000006004aa0                memcpy
+ .text.startup.main
+                0x0000000006004ab8     0x2a6c sh2_main.o
+                0x0000000006004ab8                main
+ .text._main    0x0000000006007524        0xc sh2_main.o
+                0x0000000006007524                _main
+ *(.rodata)
+ .rodata        0x0000000006007530       0x3c sh2_main.o
+ *(.rodata.*)
+ .rodata.draw_logo.str1.4
+                0x000000000600756c        0xb sh2_main.o
+ *fill*         0x0000000006007577        0x1 
+ .rodata.draw_hs_table.str1.4
+                0x0000000006007578        0xc sh2_main.o
+ .rodata.main.str1.4
+                0x0000000006007584      0x124 sh2_main.o
+                                        0x138 (size before relaxing)
+ .rodata.CSWTCH.693
+                0x00000000060076a8       0x20 sh2_main.o
+ .rodata.CSWTCH.692
+                0x00000000060076c8       0x20 sh2_main.o
+ .rodata.CSWTCH.691
+                0x00000000060076e8       0x20 sh2_main.o
+ .rodata.CSWTCH.663
+                0x0000000006007708       0x7c sh2_main.o
+ .rodata.CSWTCH.658
+                0x0000000006007784       0x4c sh2_main.o
+ .rodata.hmul.0
+                0x00000000060077d0        0xa sh2_main.o
+ *fill*         0x00000000060077da        0x2 
+ .rodata.pw.2   0x00000000060077dc       0x18 sh2_main.o
+ .rodata.animtab.3
+                0x00000000060077f4        0x8 sh2_main.o
+ .rodata.vy8.6  0x00000000060077fc       0x20 sh2_main.o
+ .rodata.vx8.7  0x000000000600781c       0x20 sh2_main.o
+ .rodata.shot.9
+                0x000000000600783c       0x20 sh2_main.o
+ .rodata.cost.12
+                0x000000000600785c       0x40 sh2_main.o
+ .rodata.sint.13
+                0x000000000600789c       0x40 sh2_main.o
+ .rodata.turn.14
+                0x00000000060078dc        0x6 sh2_main.o
+ .rodata.nm.22  0x00000000060078e2       0x1e sh2_main.o
+ .rodata.str1.4
+                0x0000000006007900      0x1e8 sh2_main.o
+                                        0x1ec (size before relaxing)
+ .rodata.onoff.24
+                0x0000000006007ae8        0x8 sh2_main.o
+ .rodata.dc.25  0x0000000006007af0       0x38 sh2_main.o
+ .rodata.ids.29
+                0x0000000006007b28        0x3 sh2_main.o
+ *fill*         0x0000000006007b2b        0x1 
+ .rodata.dir_pad
+                0x0000000006007b2c       0x12 sh2_main.o
+ *fill*         0x0000000006007b3e        0x2 
+ .rodata.dir_dy
+                0x0000000006007b40        0x9 sh2_main.o
+ *fill*         0x0000000006007b49        0x3 
+ .rodata.dir_dx
+                0x0000000006007b4c        0x9 sh2_main.o
+ *fill*         0x0000000006007b55        0x3 
+ .rodata.instructions
+                0x0000000006007b58       0x3c sh2_main.o
+ .rodata.demo_t50
+                0x0000000006007b94        0xc sh2_main.o
+ .rodata.demo_t60
+                0x0000000006007ba0        0xc sh2_main.o
+ .rodata.credits
+                0x0000000006007bac       0x60 sh2_main.o
+ .rodata.fx_bank
+                0x0000000006007c0c        0xa sh2_main.o
+ .rodata.font3x5
+                0x0000000006007c16       0xa5 sh2_main.o
+ *fill*         0x0000000006007cbb        0x1 
+ .rodata.sk_hp25
+                0x0000000006007cbc        0x5 sh2_main.o
+ *fill*         0x0000000006007cc1        0x3 
+ .rodata.sk_hp10
+                0x0000000006007cc4        0x5 sh2_main.o
+ *fill*         0x0000000006007cc9        0x1 
+ .rodata.sk_rockdmg
+                0x0000000006007cca        0xa sh2_main.o
+ .rodata.sk_rockhp
+                0x0000000006007cd4        0xa sh2_main.o
+ *fill*         0x0000000006007cde        0x2 
+ .rodata.sk_alt
+                0x0000000006007ce0        0x5 sh2_main.o
+ *fill*         0x0000000006007ce5        0x3 
+ .rodata.sk_cool
+                0x0000000006007ce8        0x5 sh2_main.o
+ *fill*         0x0000000006007ced        0x3 
+ .rodata.sk_tailheat
+                0x0000000006007cf0        0x5 sh2_main.o
+ *fill*         0x0000000006007cf5        0x3 
+ .rodata.sk_noseheat
+                0x0000000006007cf8        0x5 sh2_main.o
+ *fill*         0x0000000006007cfd        0x3 
+ .rodata.sk_tailload
+                0x0000000006007d00        0x5 sh2_main.o
+ *fill*         0x0000000006007d05        0x3 
+ .rodata.sk_noseload
+                0x0000000006007d08        0x5 sh2_main.o
+ *fill*         0x0000000006007d0d        0x3 
+ .rodata.sk_coll
+                0x0000000006007d10        0x5 sh2_main.o
+ *fill*         0x0000000006007d15        0x3 
+ .rodata.sk_health
+                0x0000000006007d18        0x5 sh2_main.o
+ *fill*         0x0000000006007d1d        0x1 
+ .rodata.sk_bonusn
+                0x0000000006007d1e        0xa sh2_main.o
+ .rodata.sk_bonus1
+                0x0000000006007d28        0xa sh2_main.o
+ *fill*         0x0000000006007d32        0x2 
+ .rodata.sk_lives
+                0x0000000006007d34        0x5 sh2_main.o
+ *fill*         0x0000000006007d39        0x1 
+ .rodata.sk_speed
+                0x0000000006007d3a        0xa sh2_main.o
+ .rodata.skill_name
+                0x0000000006007d44       0x14 sh2_main.o
+ .rodata.kscene
+                0x0000000006007d58     0x2454 sh2_main.o
+ .rodata.hard_tile
+                0x000000000600a1ac       0x10 sh2_main.o
+ .rodata.sh2_build_marker
+                0x000000000600a1bc       0x17 sh2_main.o
+                0x000000000600a1bc                sh2_build_marker
+                0x000000000600a1d4                . = ALIGN (0x4)
+ *fill*         0x000000000600a1d3        0x1 
+                0x000000000600a1d4                __text_end = .
+
+.rela.dyn       0x000000000600a1d4        0x0 load address 0x000000000000a20c
+ .rela.header   0x000000000600a1d4        0x0 crt0.o
+
+.data           0x000000000600a1d4       0x30 load address 0x000000000000a20c
+                0x000000000600a1d4                __data_start = .
+ *(.data)
+ .data          0x000000000600a1d4        0x0 crt0.o
+ .data          0x000000000600a1d4        0x0 sh2_main.o
+ *(.data.*)
+ .data.best_d.16
+                0x000000000600a1d4        0x4 sh2_main.o
+ .data.cur_gun.17
+                0x000000000600a1d8        0x4 sh2_main.o
+ .data.skip_gun.18
+                0x000000000600a1dc        0x4 sh2_main.o
+ .data.bonus_next
+                0x000000000600a1e0        0x4 sh2_main.o
+ .data.ship_health
+                0x000000000600a1e4        0x4 sh2_main.o
+ .data.opt_sfx  0x000000000600a1e8        0x4 sh2_main.o
+ .data.opt_music
+                0x000000000600a1ec        0x4 sh2_main.o
+ .data.col_green
+                0x000000000600a1f0        0x1 sh2_main.o
+ .data.col_black
+                0x000000000600a1f1        0x1 sh2_main.o
+ *fill*         0x000000000600a1f2        0x2 
+ .data.lives    0x000000000600a1f4        0x4 sh2_main.o
+ .data.ship_di  0x000000000600a1f8        0x4 sh2_main.o
+ .data.ship_y   0x000000000600a1fc        0x4 sh2_main.o
+ .data.ship_x   0x000000000600a200        0x4 sh2_main.o
+ *(.sdata)
+ *(.sdata.*)
+                0x000000000600a204                . = ALIGN (0x4)
+                0x000000000600a204                __data_end = .
+                0x000000000000a204                __code_size = (SIZEOF (.text) + SIZEOF (.data))
+
+.bss            0x000000000600a204      0xb24 load address 0x000000000000a23c
+                0x000000000600a204                __bss_start = .
+ *(.bss)
+ .bss           0x000000000600a204        0x0 crt0.o
+ .bss           0x000000000600a204        0x0 sh2_main.o
+ *(.bss.*)
+ .bss.col_yel.1
+                0x000000000600a204        0x1 sh2_main.o
+ *fill*         0x000000000600a205        0x3 
+ .bss.alt3.4    0x000000000600a208        0x4 sh2_main.o
+ .bss.alt.5     0x000000000600a20c        0x4 sh2_main.o
+ .bss.beam_snd.8
+                0x000000000600a210        0x4 sh2_main.o
+ .bss.last_metal.10
+                0x000000000600a214        0x4 sh2_main.o
+ .bss.shot_snd.11
+                0x000000000600a218        0x4 sh2_main.o
+ .bss.no_progress.15
+                0x000000000600a21c        0x4 sh2_main.o
+ .bss.skip_left.19
+                0x000000000600a220        0x4 sh2_main.o
+ .bss.commit_dir.20
+                0x000000000600a224        0x4 sh2_main.o
+ .bss.commit_left.21
+                0x000000000600a228        0x4 sh2_main.o
+ .bss.lt.26     0x000000000600a22c        0x2 sh2_main.o
+ *fill*         0x000000000600a22e        0x2 
+ .bss.have.27   0x000000000600a230        0x4 sh2_main.o
+ .bss.sk_acc.28
+                0x000000000600a234        0x4 sh2_main.o
+ .bss.vol.30    0x000000000600a238       0x10 sh2_main.o
+ .bss.step.31   0x000000000600a248       0x10 sh2_main.o
+ .bss.end.32    0x000000000600a258       0x10 sh2_main.o
+ .bss.pos.33    0x000000000600a268       0x10 sh2_main.o
+ .bss.on.34     0x000000000600a278       0x10 sh2_main.o
+ .bss.demo      0x000000000600a288      0x500 sh2_main.o
+ .bss.bram_ok   0x000000000600a788        0x4 sh2_main.o
+ .bss.save_buf  0x000000000600a78c       0x80 sh2_main.o
+ .bss.hs        0x000000000600a80c       0x50 sh2_main.o
+ .bss.hiscore   0x000000000600a85c        0x4 sh2_main.o
+ .bss.col_radar
+                0x000000000600a860        0x1 sh2_main.o
+ .bss.col_st    0x000000000600a861        0x1 sh2_main.o
+ .bss.col_sh    0x000000000600a862        0x1 sh2_main.o
+ .bss.col_sc    0x000000000600a863        0x1 sh2_main.o
+ .bss.col_hi    0x000000000600a864        0x1 sh2_main.o
+ *fill*         0x000000000600a865        0x3 
+ .bss.rle_ok    0x000000000600a868        0x4 sh2_main.o
+ .bss.fx_n      0x000000000600a86c        0xa sh2_main.o
+ *fill*         0x000000000600a876        0x2 
+ .bss.fx_h      0x000000000600a878        0xa sh2_main.o
+ *fill*         0x000000000600a882        0x2 
+ .bss.fx_w      0x000000000600a884        0xa sh2_main.o
+ *fill*         0x000000000600a88e        0x2 
+ .bss.fx_src    0x000000000600a890       0x28 sh2_main.o
+ .bss.alt_side  0x000000000600a8b8        0x4 sh2_main.o
+ .bss.tail_wait
+                0x000000000600a8bc        0x4 sh2_main.o
+ .bss.nose_wait
+                0x000000000600a8c0        0x4 sh2_main.o
+ .bss.tail_hot  0x000000000600a8c4        0x4 sh2_main.o
+ .bss.nose_hot  0x000000000600a8c8        0x4 sh2_main.o
+ .bss.tail_temp
+                0x000000000600a8cc        0x4 sh2_main.o
+ .bss.nose_temp
+                0x000000000600a8d0        0x4 sh2_main.o
+ .bss.health_fade_t
+                0x000000000600a8d4        0x4 sh2_main.o
+ .bss.opt_skill
+                0x000000000600a8d8        0x4 sh2_main.o
+ .bss.demo_mute
+                0x000000000600a8dc        0x4 sh2_main.o
+ .bss.opt_fire  0x000000000600a8e0        0x4 sh2_main.o
+ .bss.sfx_n     0x000000000600a8e4        0x4 sh2_main.o
+ .bss.sfx_head  0x000000000600a8e8        0x4 sh2_main.o
+ .bss.sfx_q     0x000000000600a8ec        0x8 sh2_main.o
+ .bss.md_ticks  0x000000000600a8f4        0x2 sh2_main.o
+ *fill*         0x000000000600a8f6        0x2 
+ .bss.pad_timeouts
+                0x000000000600a8f8        0x4 sh2_main.o
+ .bss.ship_ok   0x000000000600a8fc        0x4 sh2_main.o
+ .bss.site_max  0x000000000600a900        0x4 sh2_main.o
+ .bss.pubrand   0x000000000600a904        0x4 sh2_main.o
+ .bss.gamerand  0x000000000600a908        0x4 sh2_main.o
+ .bss.col_red   0x000000000600a90c        0x1 sh2_main.o
+ .bss.col_white
+                0x000000000600a90d        0x1 sh2_main.o
+ *fill*         0x000000000600a90e        0x2 
+ .bss.tset_loaded
+                0x000000000600a910        0x4 sh2_main.o
+ .bss.loop_no   0x000000000600a914        0x4 sh2_main.o
+ .bss.gen_count
+                0x000000000600a918        0x4 sh2_main.o
+ .bss.clear_timer
+                0x000000000600a91c        0x4 sh2_main.o
+ .bss.game_over
+                0x000000000600a920        0x4 sh2_main.o
+ .bss.dead_timer
+                0x000000000600a924        0x4 sh2_main.o
+ .bss.scene_no  0x000000000600a928        0x4 sh2_main.o
+ .bss.gfx2_ok   0x000000000600a92c        0x4 sh2_main.o
+ .bss.ship_hits
+                0x000000000600a930        0x4 sh2_main.o
+ .bss.n_cannons
+                0x000000000600a934        0x4 sh2_main.o
+ .bss.score     0x000000000600a938        0x4 sh2_main.o
+ .bss.bolt_di   0x000000000600a93c       0xa0 sh2_main.o
+ .bss.bolt_st   0x000000000600a9dc       0xa0 sh2_main.o
+ .bss.bolt_dy   0x000000000600aa7c       0xa0 sh2_main.o
+ .bss.bolt_dx   0x000000000600ab1c       0xa0 sh2_main.o
+ .bss.bolt_y    0x000000000600abbc       0xa0 sh2_main.o
+ .bss.bolt_x    0x000000000600ac5c       0xa0 sh2_main.o
+ .bss.text_shown
+                0x000000000600acfc        0x2 sh2_main.o
+ .bss.vb_last   0x000000000600acfe        0x2 sh2_main.o
+ .bss.frames    0x000000000600ad00        0x4 sh2_main.o
+ .bss._bss_end  0x000000000600ad04        0x4 sh2_main.o
+ .bss._bss_start
+                0x000000000600ad08        0x4 sh2_main.o
+ .bss._data_size
+                0x000000000600ad0c        0x4 sh2_main.o
+                0x000000000600ad0c                _data_size
+ .bss._text_end
+                0x000000000600ad10        0x4 sh2_main.o
+ .bss.mars_swdt_ovf_count
+                0x000000000600ad14        0x4 sh2_main.o
+                0x000000000600ad14                mars_swdt_ovf_count
+ .bss.mars_pwdt_ovf_count
+                0x000000000600ad18        0x4 sh2_main.o
+                0x000000000600ad18                mars_pwdt_ovf_count
+ .bss.pwm_widx  0x000000000600ad1c        0x1 sh2_main.o
+                0x000000000600ad1c                pwm_widx
+ *fill*         0x000000000600ad1d        0x3 
+ .bss.pwm_mail  0x000000000600ad20        0x8 sh2_main.o
+                0x000000000600ad20                pwm_mail
+ *(.sbss)
+ *(.sbss.*)
+ *(COMMON)
+                0x000000000600ad28                . = ALIGN (0x4)
+                0x000000000600ad28                __bss_end = .
+LOAD crt0.o
+LOAD sh2_main.o
+OUTPUT(D32XR.elf elf32-sh)
+
+.comment        0x0000000000000000       0x12
+ .comment       0x0000000000000000       0x12 sh2_main.o
+                                         0x13 (size before relaxing)
