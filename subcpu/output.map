@@ -1,0 +1,1677 @@
+Archive member included to satisfy reference by file (symbol)
+
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+                              main.o (memcpy)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+                              main.o (sprintf)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o) (_svfprintf_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (_dtoa_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o) (_impure_ptr)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (_localeconv_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (_malloc_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (memchr)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o) (__malloc_lock)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o) (_Balloc)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o) (_sbrk_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (strlen)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__ssprint_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o) (__assert_func)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o) (_calloc_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o) (__errno)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o) (fiprintf)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o) (_free_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o) (__global_locale)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o) (__ascii_mbtowc)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o) (memmove)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o) (memset)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o) (_realloc_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o) (errno)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o) (strcmp)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o) (_vfiprintf_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o) (__ascii_wctomb)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o) (__swsetup_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o) (abort)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o) (_ctype_)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o) (_fflush_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o) (__sinit)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o) (_fputwc_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o) (__sfvwrite_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o) (_fwalk)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o) (__smakebuf_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o) (raise)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o) (_kill_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o) (__sread)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o) (__swbuf_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o) (_wcrtomb_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o) (_write_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o) (_close_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o) (_fclose_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o) (_fstat_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o) (_isatty_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o) (_lseek_r)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o) (_read_r)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o) (__mulsi3)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__udivsi3)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+                              main.o (__divsi3)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__umodsi3)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__modsi3)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o) (__adddf3)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+                              /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o) (_fpCCR)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__eqdf2)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__nedf2)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o) (__gtdf2)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__ltdf2)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__ledf2)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__unorddf2)
+/opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o) (__truncxfdf2)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o) (close)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o) (fstat)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o) (getpid)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o) (isatty)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o) (kill)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o) (lseek)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o) (read)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o) (sbrk)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o) (write)
+/opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+                              /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o) (_exit)
+
+Discarded input sections
+
+ .gnu.warning.close
+                0x0000000000000000        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .gnu.warning.fstat
+                0x0000000000000000        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .gnu.warning.getpid
+                0x0000000000000000        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .gnu.warning.isatty
+                0x0000000000000000        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .gnu.warning.kill
+                0x0000000000000000        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .gnu.warning.lseek
+                0x0000000000000000        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .gnu.warning.read
+                0x0000000000000000        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .gnu.warning.write
+                0x0000000000000000        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000008000 0x0000000000078000 xw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD crt0.o
+LOAD main.o
+LOAD hw_md.o
+LOAD scd.o
+LOAD scd_fs.o
+LOAD cd.o
+LOAD kos.o
+LOAD cdfs.o
+LOAD sub_stubs.o
+LOAD /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a
+LOAD /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a
+LOAD /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a
+LOAD files.o
+                0x0000000000000000                __DYNAMIC = 0x0
+                0x0000000000080000                PROVIDE (__stack = 0x80000)
+
+.text           0x0000000000008000    0x1af20
+                0x0000000000008000                __text_start = .
+ *(.text)
+ .text          0x0000000000008000       0x4c crt0.o
+                0x0000000000008000                _start
+ .text          0x000000000000804c     0x1448 main.o
+                0x000000000000813c                write_byte
+                0x0000000000008146                write_word
+                0x0000000000008150                write_long
+                0x000000000000815a                read_byte
+                0x0000000000008168                read_word
+                0x0000000000008170                read_long
+                0x0000000000008178                scd_init_pcm
+                0x000000000000817a                bump_fm
+                0x0000000000008182                mystrlen
+                0x000000000000819a                print_diag
+                0x000000000000819c                main
+ .text          0x0000000000009494     0x1ccc hw_md.o
+                0x0000000000009494                do_md_cmd0
+                0x00000000000094a0                do_md_cmd1
+                0x00000000000094b2                do_md_cmd2
+                0x00000000000094ca                do_md_cmd3
+                0x00000000000094e8                do_md_cmd4
+                0x000000000000950c                send_md_cmd0
+                0x0000000000009512                send_md_cmd1
+                0x000000000000951e                send_md_cmd2
+                0x0000000000009530                send_md_cmd3
+                0x0000000000009548                send_md_cmd4
+                0x0000000000009582                wait_md_cmd
+                0x0000000000009594                switch_banks
+                0x00000000000095a4                init_hardware
+ .text          0x000000000000b160      0xdd0 scd.o
+                0x000000000000b160                scd_sub_read
+                0x000000000000b17c                scd_cdda_play
+                0x000000000000b1b2                scd_track_info
+                0x000000000000b1c8                scd_cd_status
+                0x000000000000b1e4                scd_bios_call
+                0x000000000000b1fe                scd_open_file
+                0x000000000000b4fa                scd_read_directory
+                0x000000000000b5e0                scd_read_sectors
+                0x000000000000b6d8                scd_switch_to_bank
+                0x000000000000b75a                scd_play_spcm_track
+                0x000000000000b812                scd_stop_spcm_track
+                0x000000000000b884                scd_resume_spcm_track
+                0x000000000000b8f6                scd_get_spcm_playback_status
+                0x000000000000b90c                scd_set_volume
+                0x000000000000b994                scd_get_disc_info
+                0x000000000000ba6e                scd_get_track_info
+                0x000000000000bb36                scd_play_cdda_track
+                0x000000000000bbd6                scd_stop_cdda_playback
+                0x000000000000bc48                scd_toggle_cdda_pause
+                0x000000000000bcba                scd_open_tray
+                0x000000000000bd2c                scd_stream_cd
+                0x000000000000bde2                scd_stream_cmd
+                0x000000000000be5a                InitCD
+ .text          0x000000000000bf30      0x1d8 scd_fs.o
+                0x000000000000bf30                scd_open_gfile_by_name
+                0x000000000000bf66                scd_open_gfile_by_length_offset
+                0x000000000000bf86                scd_read_gfile
+                0x000000000000c092                scd_seek_gfile
+                0x000000000000c0f8                scd_tell_gfile
+                0x000000000000c100                scd_gfile_length
+ .text          0x000000000000c108      0xa46 cd.o
+                0x000000000000c108                Sub_Start
+                0x000000000000cb4e                Sub_End
+ *fill*         0x000000000000cb4e        0x2 
+ .text          0x000000000000cb50       0xb0 kos.o
+                0x000000000000cb50                Kos_Decomp
+ .text          0x000000000000cc00      0x4e8 cdfs.o
+                0x000000000000cc00                init_cd
+                0x000000000000cc12                seek_cd
+                0x000000000000cc24                begin_read_cd
+                0x000000000000cc3a                dma_cd_sector_pcm
+                0x000000000000cc50                dma_cd_sector_prg
+                0x000000000000cc66                dma_cd_sector_wram
+                0x000000000000cc7c                stop_read_cd
+                0x000000000000cc92                set_cwd
+                0x000000000000cca4                first_dir_sec
+                0x000000000000ccb2                next_dir_sec
+                0x000000000000ccc0                find_dir_entry
+                0x000000000000ccd2                next_dir_entry
+                0x000000000000cfd8                ReadSectorsSUB
+                0x000000000000d0b0                CURR_OFFSET
+                0x000000000000d0c0                DENTRY_OFFSET
+                0x000000000000d0c4                DENTRY_LENGTH
+                0x000000000000d0c8                DENTRY_FLAGS
+                0x000000000000d0ca                CDA_VOLUME
+                0x000000000000d0cc                cd_drvinit_tries
+                0x000000000000d0ce                sub_read_sectors
+ .text          0x000000000000d0e8       0xb0 sub_stubs.o
+                0x000000000000d0e8                S_Init
+                0x000000000000d0ea                S_Clear
+                0x000000000000d0ec                S_Update
+                0x000000000000d0ee                S_CopyBufferData
+                0x000000000000d0f0                S_SetBufferData
+                0x000000000000d0f2                S_PauseSPCMTrack
+                0x000000000000d0f4                S_LoadCDBuffers
+                0x000000000000d0f6                S_PlaySPCMTrack
+                0x000000000000d0fa                S_StopSPCMTrack
+                0x000000000000d0fc                S_UnpauseSPCMTrack
+                0x000000000000d0fe                S_GetMemBankPtr
+                0x000000000000d104                stream_cd
+                0x000000000000d106                S_PlaySource
+                0x000000000000d10a                S_PUnPSource
+                0x000000000000d10c                S_RewindSource
+                0x000000000000d10e                S_StopSource
+                0x000000000000d110                S_UpdateSource
+                0x000000000000d112                S_GetSourcePosition
+                0x000000000000d116                open_file
+                0x000000000000d18c                read_directory
+                0x000000000000d192                read_sectors
+ .text          0x000000000000d198       0x6e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+                0x000000000000d198                memcpy
+ *fill*         0x000000000000d206        0x2 
+ .text          0x000000000000d208       0xa2 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+                0x000000000000d208                _sprintf_r
+                0x000000000000d258                sprintf
+ *fill*         0x000000000000d2aa        0x2 
+ .text          0x000000000000d2ac     0x1cec /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+                0x000000000000d2ac                _svfprintf_r
+ .text          0x000000000000ef98     0x1b06 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                0x000000000000f13a                _dtoa_r
+ *fill*         0x0000000000010a9e        0x2 
+ .text          0x0000000000010aa0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .text          0x0000000000010aa0       0x1c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+                0x0000000000010aa0                __localeconv_l
+                0x0000000000010aac                _localeconv_r
+                0x0000000000010ab4                localeconv
+ .text          0x0000000000010abc      0x83a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                0x0000000000010abc                _malloc_r
+ *fill*         0x00000000000112f6        0x2 
+ .text          0x00000000000112f8       0x9e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+                0x00000000000112f8                memchr
+ *fill*         0x0000000000011396        0x2 
+ .text          0x0000000000011398        0x4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+                0x0000000000011398                __malloc_lock
+                0x000000000001139a                __malloc_unlock
+ .text          0x000000000001139c      0xe24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                0x000000000001139c                _Balloc
+                0x000000000001142c                _Bfree
+                0x0000000000011450                __multadd
+                0x000000000001154a                __s2b
+                0x0000000000011626                __hi0bits
+                0x000000000001168c                __lo0bits
+                0x0000000000011702                __i2b
+                0x00000000000117a6                __multiply
+                0x00000000000119ae                __pow5mult
+                0x0000000000011aa2                __lshift
+                0x0000000000011bb2                __mcmp
+                0x0000000000011c00                __mdiff
+                0x0000000000011dbe                __ulp
+                0x0000000000011e10                __b2d
+                0x0000000000011f02                __d2b
+                0x000000000001201c                __ratio
+                0x00000000000120b4                _mprec_log10
+                0x000000000001210e                __copybits
+                0x0000000000012166                __any_on
+ .text          0x00000000000121c0       0x2a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+                0x00000000000121c0                _sbrk_r
+ *fill*         0x00000000000121ea        0x2 
+ .text          0x00000000000121ec       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+                0x00000000000121ec                strlen
+ .text          0x0000000000012200      0xf42 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+                0x0000000000012200                __ssprint_r
+                0x0000000000012390                _svfiprintf_r
+ *fill*         0x0000000000013142        0x2 
+ .text          0x0000000000013144       0x80 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+                0x0000000000013144                __assert_func
+                0x00000000000131b2                __assert
+ .text          0x00000000000131c4      0x13a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                0x00000000000131c4                _calloc_r
+ *fill*         0x00000000000132fe        0x2 
+ .text          0x0000000000013300        0x8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+                0x0000000000013300                __errno
+ .text          0x0000000000013308       0x46 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+                0x0000000000013308                _fiprintf_r
+                0x000000000001332a                fiprintf
+ *fill*         0x000000000001334e        0x2 
+ .text          0x0000000000013350      0x42a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+                0x0000000000013350                _malloc_trim_r
+                0x000000000001342a                _free_r
+ *fill*         0x000000000001377a        0x2 
+ .text          0x000000000001377c       0xb4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+                0x000000000001377c                _setlocale_r
+                0x00000000000137d0                __locale_mb_cur_max
+                0x00000000000137dc                setlocale
+ .text          0x0000000000013830       0x4c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+                0x0000000000013830                _mbtowc_r
+                0x0000000000013838                __ascii_mbtowc
+ .text          0x000000000001387c       0xf8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+                0x000000000001387c                memmove
+ .text          0x0000000000013974       0x72 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+                0x0000000000013974                memset
+ *fill*         0x00000000000139e6        0x2 
+ .text          0x00000000000139e8      0x5ec /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                0x00000000000139e8                _realloc_r
+ .text          0x0000000000013fd4      0x162 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+                0x0000000000013fd4                cleanup_glue
+                0x0000000000014056                _reclaim_reent
+ *fill*         0x0000000000014136        0x2 
+ .text          0x0000000000014138       0x78 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+                0x0000000000014138                strcmp
+ .text          0x00000000000141b0     0x11d6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                0x000000000001424c                __sprint_r
+                0x0000000000014262                _vfiprintf_r
+                0x00000000000152c8                vfiprintf
+ *fill*         0x0000000000015386        0x2 
+ .text          0x0000000000015388       0x36 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+                0x0000000000015388                _wctomb_r
+                0x0000000000015390                __ascii_wctomb
+ *fill*         0x00000000000153be        0x2 
+ .text          0x00000000000153c0      0x132 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+                0x00000000000153c0                __swsetup_r
+ *fill*         0x00000000000154f2        0x2 
+ .text          0x00000000000154f4       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+                0x00000000000154f4                abort
+ .text          0x0000000000015508        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .text          0x0000000000015508      0x25c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                0x0000000000015508                __sflush_r
+                0x00000000000156b6                _fflush_r
+                0x00000000000156fc                fflush
+ .text          0x0000000000015764      0x312 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                0x0000000000015768                _cleanup_r
+                0x00000000000158c4                __sfmoreglue
+                0x000000000001591e                __sfp
+                0x0000000000015a20                _cleanup
+                0x0000000000015a36                __sinit
+                0x0000000000015a46                __sfp_lock_acquire
+                0x0000000000015a48                __sfp_lock_release
+                0x0000000000015a4a                __sinit_lock_acquire
+                0x0000000000015a4c                __sinit_lock_release
+                0x0000000000015a4e                __fp_lock_all
+                0x0000000000015a62                __fp_unlock_all
+ *fill*         0x0000000000015a76        0x2 
+ .text          0x0000000000015a78      0x13e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+                0x0000000000015a78                __fputwc
+                0x0000000000015b2e                _fputwc_r
+                0x0000000000015b62                fputwc
+ *fill*         0x0000000000015bb6        0x2 
+ .text          0x0000000000015bb8      0x3b6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                0x0000000000015bb8                __sfvwrite_r
+ *fill*         0x0000000000015f6e        0x2 
+ .text          0x0000000000015f70       0xac /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+                0x0000000000015f70                _fwalk
+                0x0000000000015fc4                _fwalk_reent
+ .text          0x000000000001601c      0x1d6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+                0x000000000001601c                __smakebuf_r
+                0x0000000000016156                __swhatbuf_r
+ *fill*         0x00000000000161f2        0x2 
+ .text          0x00000000000161f4      0x370 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+                0x00000000000161f4                _init_signal_r
+                0x0000000000016236                _signal_r
+                0x000000000001629a                _raise_r
+                0x0000000000016316                __sigtramp_r
+                0x00000000000163a8                raise
+                0x0000000000016426                signal
+                0x000000000001648c                _init_signal
+                0x00000000000164d0                __sigtramp
+ .text          0x0000000000016564       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+                0x0000000000016564                _kill_r
+                0x0000000000016592                _getpid_r
+ .text          0x0000000000016598      0x114 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                0x0000000000016598                __sread
+                0x00000000000165d0                __seofread
+                0x00000000000165d4                __swrite
+                0x000000000001665a                __sseek
+                0x000000000001669a                __sclose
+ .text          0x00000000000166ac      0x12a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                0x00000000000166ac                __swbuf_r
+                0x00000000000167be                __swbuf
+ *fill*         0x00000000000167d6        0x2 
+ .text          0x00000000000167d8       0xc8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+                0x00000000000167d8                _wcrtomb_r
+                0x0000000000016838                wcrtomb
+ .text          0x00000000000168a0       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+                0x00000000000168a0                _write_r
+ .text          0x00000000000168d4       0x2a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+                0x00000000000168d4                _close_r
+ *fill*         0x00000000000168fe        0x2 
+ .text          0x0000000000016900       0xea /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                0x0000000000016900                _fclose_r
+                0x00000000000169d8                fclose
+ *fill*         0x00000000000169ea        0x2 
+ .text          0x00000000000169ec       0x2e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+                0x00000000000169ec                _fstat_r
+ *fill*         0x0000000000016a1a        0x2 
+ .text          0x0000000000016a1c       0x2a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+                0x0000000000016a1c                _isatty_r
+ *fill*         0x0000000000016a46        0x2 
+ .text          0x0000000000016a48       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+                0x0000000000016a48                _lseek_r
+ .text          0x0000000000016a7c       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+                0x0000000000016a7c                _read_r
+ .text          0x0000000000016ab0       0x22 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+                0x0000000000016ab0                __mulsi3_internal
+                0x0000000000016ab0                __mulsi3
+ *fill*         0x0000000000016ad2        0x2 
+ .text          0x0000000000016ad4       0x5c /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+                0x0000000000016ad4                __udivsi3_internal
+                0x0000000000016ad4                __udivsi3
+ .text          0x0000000000016b30       0x2e /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+                0x0000000000016b30                __divsi3_internal
+                0x0000000000016b30                __divsi3
+ *fill*         0x0000000000016b5e        0x2 
+ .text          0x0000000000016b60       0x2e /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+                0x0000000000016b60                __umodsi3
+ *fill*         0x0000000000016b8e        0x2 
+ .text          0x0000000000016b90       0x2e /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+                0x0000000000016b90                __modsi3
+ *fill*         0x0000000000016bbe        0x2 
+ .text          0x0000000000016bc0      0x9cc /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+                0x0000000000016c1a                __subdf3
+                0x0000000000016c20                __adddf3
+                0x0000000000016fb6                __muldf3
+                0x0000000000017164                __divdf3
+                0x00000000000173d8                __negdf2
+                0x0000000000017436                __cmpdf2_internal
+                0x0000000000017506                __cmpdf2
+ .text          0x000000000001758c       0x6a /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+                0x000000000001758c                __clear_sticky_bit
+                0x000000000001759a                $_exception_handler
+ *fill*         0x00000000000175f6        0x2 
+ .text          0x00000000000175f8       0x22 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+                0x00000000000175f8                __eqdf2
+ *fill*         0x000000000001761a        0x2 
+ .text          0x000000000001761c       0x22 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+                0x000000000001761c                __nedf2
+ *fill*         0x000000000001763e        0x2 
+ .text          0x0000000000017640       0x22 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+                0x0000000000017640                __gtdf2
+ *fill*         0x0000000000017662        0x2 
+ .text          0x0000000000017664       0x22 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+                0x0000000000017664                __ltdf2
+ *fill*         0x0000000000017686        0x2 
+ .text          0x0000000000017688       0x22 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+                0x0000000000017688                __ledf2
+ *fill*         0x00000000000176aa        0x2 
+ .text          0x00000000000176ac      0x560 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+                0x0000000000017758                __unordsf2
+                0x00000000000177ae                __unorddf2
+                0x000000000001781e                __floatunsidf
+                0x00000000000178a0                __floatsidf
+                0x00000000000178b0                __floatunsisf
+                0x000000000001793c                __floatsisf
+                0x0000000000017958                __extendsfdf2
+                0x00000000000179cc                __truncdfsf2
+                0x0000000000017ae8                __fixdfsi
+                0x0000000000017b78                __fixsfsi
+ .text          0x0000000000017c0c      0x8c2 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+                0x0000000000017c0c                __unordxf2
+                0x0000000000017cac                __extenddfxf2
+                0x0000000000017d62                __truncxfdf2
+                0x0000000000017e2a                __extendsfxf2
+                0x0000000000017ee4                __truncxfsf2
+                0x0000000000017fde                __floatsixf
+                0x0000000000018024                __floatunsixf
+                0x000000000001806a                __fixxfsi
+                0x000000000001808c                __addxf3
+                0x0000000000018102                __subxf3
+                0x0000000000018178                __mulxf3
+                0x00000000000181ee                __divxf3
+                0x0000000000018264                __negxf2
+                0x00000000000182ba                __cmpxf2
+                0x0000000000018306                __eqxf2
+                0x0000000000018352                __nexf2
+                0x000000000001839e                __ltxf2
+                0x00000000000183ea                __lexf2
+                0x0000000000018436                __gtxf2
+                0x0000000000018482                __gexf2
+ *fill*         0x00000000000184ce        0x2 
+ .text          0x00000000000184d0        0xc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+                0x00000000000184d0                close
+ .text          0x00000000000184dc        0xc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+                0x00000000000184dc                fstat
+ .text          0x00000000000184e8        0xc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+                0x00000000000184e8                getpid
+ .text          0x00000000000184f4        0xc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+                0x00000000000184f4                isatty
+ .text          0x0000000000018500        0xc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+                0x0000000000018500                kill
+ .text          0x000000000001850c        0xc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+                0x000000000001850c                lseek
+ .text          0x0000000000018518        0xc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+                0x0000000000018518                read
+ .text          0x0000000000018524       0x2a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+                0x0000000000018524                sbrk
+ *fill*         0x000000000001854e        0x2 
+ .text          0x0000000000018550        0xc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+                0x0000000000018550                write
+ .text          0x000000000001855c        0x2 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+                0x000000000001855c                _exit
+ *fill*         0x000000000001855e        0x2 
+ .text          0x0000000000018560     0xa140 files.o
+                0x0000000000018560                sh2_app_start
+                0x000000000002269c                sh2_app_length
+ *(.text.*)
+ *(.gnu.linkonce.t.*)
+                0x00000000000226a0                . = ALIGN (0x10)
+                0x00000000000226a0                __INIT_SECTION__ = .
+ *(.init)
+                0x00000000000226a0        0x2 SHORT 0x4e75
+                0x00000000000226b0                . = ALIGN (0x10)
+ *fill*         0x00000000000226a2        0xe 
+                0x00000000000226b0                __FINI_SECTION__ = .
+ *(.fini)
+                0x00000000000226b0        0x2 SHORT 0x4e75
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.gcc_except_table.*)
+ *(.jcr)
+                0x00000000000226c0                . = ALIGN (0x10)
+ *fill*         0x00000000000226b2        0xe 
+                0x00000000000226c0                __CTOR_LIST__ = .
+                0x00000000000226c0                ___CTOR_LIST__ = .
+                0x00000000000226c0        0x4 LONG 0x0 (((__CTOR_END__ - __CTOR_LIST__) / 0x4) - 0x2)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+                0x00000000000226c4        0x4 LONG 0x0
+                0x00000000000226c8                __CTOR_END__ = .
+                0x00000000000226d0                . = ALIGN (0x10)
+ *fill*         0x00000000000226c8        0x8 
+                0x00000000000226d0                __DTOR_LIST__ = .
+                0x00000000000226d0                ___DTOR_LIST__ = .
+                0x00000000000226d0        0x4 LONG 0x0 (((__DTOR_END__ - __DTOR_LIST__) / 0x4) - 0x2)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+                0x00000000000226d4        0x4 LONG 0x0
+                0x00000000000226d8                __DTOR_END__ = .
+ *(.rdata)
+ *(.rodata)
+ .rodata        0x00000000000226d8        0xc main.o
+ .rodata        0x00000000000226e4       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .rodata        0x0000000000022704        0x4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+                0x0000000000022704                _global_impure_ptr
+ .rodata        0x0000000000022708      0x124 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                0x0000000000022714                __mprec_tinytens
+                0x000000000002273c                __mprec_bigtens
+                0x0000000000022764                __mprec_tens
+ .rodata        0x000000000002282c       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .rodata        0x000000000002284c       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .rodata        0x000000000002286c      0x101 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+                0x000000000002286c                _ctype_
+ *(.rodata.*)
+ .rodata.str1.1
+                0x000000000002296d      0x3e2 main.o
+                                        0x3e6 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000022d4f       0xc0 scd.o
+ .rodata.str1.1
+                0x0000000000022e0f        0x2 sub_stubs.o
+ .rodata.str1.1
+                0x0000000000022e0f       0x3b /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .rodata.str1.1
+                0x0000000000022e4a       0x54 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                                         0x56 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000022e9e       0x37 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                         0x48 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000022ed5       0x29 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .rodata.str1.1
+                0x0000000000022ed5       0x3c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+                                         0x3d (size before relaxing)
+ .rodata.str1.1
+                0x0000000000022f11        0xa /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+                                          0xb (size before relaxing)
+ .rodata.str1.1
+                0x0000000000022f1b       0x29 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ *(.gnu.linkonce.r.*)
+                0x0000000000022f50                . = ALIGN (0x10)
+ *fill*         0x0000000000022f1b        0x5 
+                0x0000000000022f20                __text_end = .
+                0x000000000001af20                __text_size = (__text_end - __text_start)
+
+.data           0x0000000000022f20      0xb78
+                0x0000000000022f20                __data_start = .
+ *(.data)
+ .data          0x0000000000022f20        0x4 crt0.o
+ .data          0x0000000000022f24        0x3 main.o
+ *fill*         0x0000000000022f27        0x1 
+ .data          0x0000000000022f28        0x0 hw_md.o
+ *fill*         0x0000000000022f28        0x8 
+ .data          0x0000000000022f30      0x1ac scd.o
+                0x0000000000022f30                scd_delay
+                0x0000000000022f40                wait_cmd_ack
+                0x0000000000022f90                wait_do_cmd
+ .data          0x00000000000230dc        0x0 scd_fs.o
+ .data          0x00000000000230dc        0x0 cd.o
+ .data          0x00000000000230dc        0x0 kos.o
+ .data          0x00000000000230dc        0x0 cdfs.o
+ .data          0x00000000000230dc        0x0 sub_stubs.o
+ .data          0x00000000000230dc        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .data          0x00000000000230dc        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .data          0x00000000000230dc        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .data          0x00000000000230dc        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .data          0x00000000000230dc      0x426 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+                0x00000000000230dc                _impure_ptr
+ *fill*         0x0000000000023502        0x2 
+ .data          0x0000000000023504        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .data          0x0000000000023504      0x410 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                0x0000000000023504                __malloc_sbrk_base
+                0x0000000000023508                __malloc_trim_threshold
+                0x000000000002350c                __malloc_av_
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .data          0x0000000000023914        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .data          0x0000000000023914      0x168 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+                0x0000000000023914                __global_locale
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+ .data          0x0000000000023a7c        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+ .data          0x0000000000023a7c       0x1c /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+                0x0000000000023a7c                _fpCCR
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+ .data          0x0000000000023a98        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+ .data          0x0000000000023a98        0x0 files.o
+ *(.data.*)
+ *(.gnu.linkonce.d.*)
+ *(.lit8)
+ *(.lit4)
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+                0x0000000000023a98                . = ALIGN (0x8)
+                0x0000000000023a98                __data_end = .
+                0x0000000000000b78                __data_size = (__data_end - __data_start)
+
+.bss            0x0000000000023a98     0x2a58
+                0x0000000000023a98                __bss_start = .
+ *(.bss)
+ .bss           0x0000000000023a98        0x0 crt0.o
+ .bss           0x0000000000023a98      0x800 main.o
+                0x0000000000023a98                gen_lvl2
+ .bss           0x0000000000024298        0x0 hw_md.o
+ .bss           0x0000000000024298        0x4 scd.o
+                0x0000000000024298                scd_last_timeout_code
+ .bss           0x000000000002429c       0x10 scd_fs.o
+                0x000000000002429c                gfh
+ .bss           0x00000000000242ac        0x0 cd.o
+ .bss           0x00000000000242ac        0x0 kos.o
+ *fill*         0x00000000000242ac        0x4 
+ .bss           0x00000000000242b0     0x2200 cdfs.o
+                0x00000000000242b0                DISC_BUFFER
+                0x00000000000262b0                DENTRY_NAME
+ .bss           0x00000000000264b0        0x0 sub_stubs.o
+ .bss           0x00000000000264b0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .bss           0x00000000000264b0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .bss           0x00000000000264b0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .bss           0x00000000000264b0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .bss           0x00000000000264b0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .bss           0x00000000000264b0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .bss           0x00000000000264b0       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                0x00000000000264b0                __malloc_current_mallinfo
+                0x00000000000264d8                __malloc_max_total_mem
+                0x00000000000264dc                __malloc_max_sbrked_mem
+                0x00000000000264e0                __malloc_top_pad
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .bss           0x00000000000264e4        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .bss           0x00000000000264e4        0x4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+                0x00000000000264e4                _PathLocale
+ .bss           0x00000000000264e8        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .bss           0x00000000000264e8        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .bss           0x00000000000264e8        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .bss           0x00000000000264e8        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .bss           0x00000000000264e8        0x4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+                0x00000000000264e8                errno
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .bss           0x00000000000264ec        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .bss           0x00000000000264ec        0x4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .bss           0x00000000000264f0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+ .bss           0x00000000000264f0        0x0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+ .bss           0x00000000000264f0        0x0 files.o
+ *(.bss.*)
+ *(.gnu.linkonce.b.*)
+ *(.sbss)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+ *(.scommon)
+ *(COMMON)
+                0x00000000000264f0                . = ALIGN (0x8)
+                0x00000000000264f0                end = .
+                0x00000000000264f0                _end = end
+                0x00000000000264f0                __end = _end
+                0x00000000000264f0                __bss_end = .
+                0x0000000000002a58                __bss_size = (__bss_end - __bss_start)
+OUTPUT(CDROMPlayer.elf elf32-m68k)
+
+.comment        0x0000000000000000       0x12
+ .comment       0x0000000000000000       0x12 main.o
+                                         0x13 (size before relaxing)
+ .comment       0x0000000000000012       0x13 scd.o
+ .comment       0x0000000000000012       0x13 scd_fs.o
+ .comment       0x0000000000000012       0x13 sub_stubs.o
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+ .comment       0x0000000000000012       0x13 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+
+.debug_line     0x0000000000000000     0xf4fc
+ .debug_line    0x0000000000000000       0x69 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000000069      0x227 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .debug_line    0x0000000000000290     0x19ab /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .debug_line    0x0000000000001c3b     0x16cf /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_line    0x000000000000330a      0x10d /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000003417      0x1ab /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_line    0x00000000000035c2      0x9b1 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_line    0x0000000000003f73      0x1b6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_line    0x0000000000004129      0x181 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_line    0x00000000000042aa     0x1627 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_line    0x00000000000058d1      0x1a4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_line    0x0000000000005a75      0x121 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000005b96     0x1180 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_line    0x0000000000006d16      0x1bb /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+ .debug_line    0x0000000000006ed1      0x268 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_line    0x0000000000007139      0x12f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+ .debug_line    0x0000000000007268      0x1b6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .debug_line    0x000000000000741e      0x530 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_line    0x000000000000794e      0x289 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_line    0x0000000000007bd7      0x236 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_line    0x0000000000007e0d      0x1fe /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_line    0x000000000000800b       0x6d /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_line    0x0000000000008078      0x835 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_line    0x00000000000088ad      0x2bf /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_line    0x0000000000008b6c      0x162 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_line    0x0000000000008cce     0x13dd /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_line    0x000000000000a0ab      0x229 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_line    0x000000000000a2d4      0x326 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_line    0x000000000000a5fa      0x125 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+ .debug_line    0x000000000000a71f       0xa9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_line    0x000000000000a7c8      0x491 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_line    0x000000000000ac59      0x5bb /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_line    0x000000000000b214      0x318 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_line    0x000000000000b52c      0x62c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_line    0x000000000000bb58      0x251 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_line    0x000000000000bda9      0x3d4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_line    0x000000000000c17d      0x636 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .debug_line    0x000000000000c7b3      0x1d7 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .debug_line    0x000000000000c98a      0x25f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_line    0x000000000000cbe9      0x2d7 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_line    0x000000000000cec0      0x28e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_line    0x000000000000d14e      0x1b0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_line    0x000000000000d2fe      0x1b0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_line    0x000000000000d4ae      0x283 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_line    0x000000000000d731      0x239 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_line    0x000000000000d96a      0x1b1 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_line    0x000000000000db1b      0x1bb /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_line    0x000000000000dcd6      0x1af /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_line    0x000000000000de85       0x54 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+ .debug_line    0x000000000000ded9       0x6d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+ .debug_line    0x000000000000df46       0x5c /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+ .debug_line    0x000000000000dfa2       0x58 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+ .debug_line    0x000000000000dffa       0x58 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+ .debug_line    0x000000000000e052      0x3cb /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+ .debug_line    0x000000000000e41d       0x63 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+ .debug_line    0x000000000000e480       0x52 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+ .debug_line    0x000000000000e4d2       0x52 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+ .debug_line    0x000000000000e524       0x52 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+ .debug_line    0x000000000000e576       0x52 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+ .debug_line    0x000000000000e5c8       0x52 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+ .debug_line    0x000000000000e61a      0x5eb /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .debug_line    0x000000000000ec05      0x372 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .debug_line    0x000000000000ef77       0x73 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .debug_line    0x000000000000efea      0x15f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .debug_line    0x000000000000f149       0x74 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .debug_line    0x000000000000f1bd       0x74 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .debug_line    0x000000000000f231       0x72 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .debug_line    0x000000000000f2a3       0x73 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .debug_line    0x000000000000f316       0x72 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .debug_line    0x000000000000f388       0x91 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .debug_line    0x000000000000f419       0x73 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+ .debug_line    0x000000000000f48c       0x70 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+
+.debug_line_str
+                0x0000000000000000      0x12f
+ .debug_line_str
+                0x0000000000000000       0xa5 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+                                         0xae (size before relaxing)
+ .debug_line_str
+                0x00000000000000a5        0x9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+                                         0xae (size before relaxing)
+ .debug_line_str
+                0x00000000000000ae       0x81 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+                                         0x8b (size before relaxing)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+ .debug_line_str
+                0x000000000000012f       0x8b /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+
+.debug_info     0x0000000000000000    0x20e99
+ .debug_info    0x0000000000000000       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_info    0x0000000000000024      0x9f7 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .debug_info    0x0000000000000a1b     0x15ae /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .debug_info    0x0000000000001fc9     0x170c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_info    0x00000000000036d5      0x8ca /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_info    0x0000000000003f9f      0xbd3 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_info    0x0000000000004b72      0xdd9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_info    0x000000000000594b      0x13c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_info    0x0000000000005a87      0x8e1 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_info    0x0000000000006368     0x1d35 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_info    0x000000000000809d      0x91d /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_info    0x00000000000089ba       0xdb /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_info    0x0000000000008a95     0x1178 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_info    0x0000000000009c0d      0x989 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+ .debug_info    0x000000000000a596      0xa54 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_info    0x000000000000afea      0x8b5 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+ .debug_info    0x000000000000b89f      0x9ca /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .debug_info    0x000000000000c269      0xc6c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_info    0x000000000000ced5      0xcff /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_info    0x000000000000dbd4      0xc47 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_info    0x000000000000e81b      0x144 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_info    0x000000000000e95f       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_info    0x000000000000e983      0xd0e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_info    0x000000000000f691      0xae9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_info    0x000000000001017a       0xeb /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_info    0x0000000000010265     0x17f3 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_info    0x0000000000011a58      0xc08 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_info    0x0000000000012660      0x953 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_info    0x0000000000012fb3       0xc8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+ .debug_info    0x000000000001307b       0xb9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_info    0x0000000000013134      0xb20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_info    0x0000000000013c54      0xf01 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_info    0x0000000000014b55      0xb8a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_info    0x00000000000156df      0xbba /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_info    0x0000000000016299      0x9c1 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_info    0x0000000000016c5a      0xd6e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_info    0x00000000000179c8      0xd00 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .debug_info    0x00000000000186c8      0x974 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .debug_info    0x000000000001903c      0xb99 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_info    0x0000000000019bd5      0x9ca /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_info    0x000000000001a59f      0xc5d /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_info    0x000000000001b1fc      0x936 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_info    0x000000000001bb32      0x8fe /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_info    0x000000000001c430      0xa31 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_info    0x000000000001ce61      0xb11 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_info    0x000000000001d972      0x8fe /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_info    0x000000000001e270      0x93d /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_info    0x000000000001ebad      0x930 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_info    0x000000000001f4dd       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+ .debug_info    0x000000000001f501       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+ .debug_info    0x000000000001f525       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+ .debug_info    0x000000000001f549       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+ .debug_info    0x000000000001f56d       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+ .debug_info    0x000000000001f591       0x25 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+ .debug_info    0x000000000001f5b6       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+ .debug_info    0x000000000001f5da       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+ .debug_info    0x000000000001f5fe       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+ .debug_info    0x000000000001f622       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+ .debug_info    0x000000000001f646       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+ .debug_info    0x000000000001f66a       0x24 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+ .debug_info    0x000000000001f68e      0x5c8 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .debug_info    0x000000000001fc56      0x7d0 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .debug_info    0x0000000000020426       0xd9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .debug_info    0x00000000000204ff      0x2f3 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .debug_info    0x00000000000207f2       0xc9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .debug_info    0x00000000000208bb       0xd9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .debug_info    0x0000000000020994       0xe6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .debug_info    0x0000000000020a7a       0xf3 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .debug_info    0x0000000000020b6d       0xf9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .debug_info    0x0000000000020c66       0x99 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .debug_info    0x0000000000020cff       0xf9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+ .debug_info    0x0000000000020df8       0xa1 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+
+.debug_abbrev   0x0000000000000000     0x7a6b
+ .debug_abbrev  0x0000000000000000       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000000014      0x26f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .debug_abbrev  0x0000000000000283      0x3eb /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .debug_abbrev  0x000000000000066e      0x379 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_abbrev  0x00000000000009e7      0x1ca /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000000bb1      0x271 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_abbrev  0x0000000000000e22      0x2fa /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_abbrev  0x000000000000111c       0xe5 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_abbrev  0x0000000000001201      0x202 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_abbrev  0x0000000000001403      0x536 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_abbrev  0x0000000000001939      0x227 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_abbrev  0x0000000000001b60       0x8a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000001bea      0x33a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_abbrev  0x0000000000001f24      0x23a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+ .debug_abbrev  0x000000000000215e      0x26a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_abbrev  0x00000000000023c8      0x1ce /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+ .debug_abbrev  0x0000000000002596      0x255 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .debug_abbrev  0x00000000000027eb      0x2a6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_abbrev  0x0000000000002a91      0x2d8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_abbrev  0x0000000000002d69      0x25f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_abbrev  0x0000000000002fc8       0xc3 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_abbrev  0x000000000000308b       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_abbrev  0x000000000000309f      0x288 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_abbrev  0x0000000000003327      0x2ea /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_abbrev  0x0000000000003611       0x83 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_abbrev  0x0000000000003694      0x484 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_abbrev  0x0000000000003b18      0x233 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_abbrev  0x0000000000003d4b      0x232 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_abbrev  0x0000000000003f7d       0x85 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+ .debug_abbrev  0x0000000000004002       0x62 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_abbrev  0x0000000000004064      0x343 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_abbrev  0x00000000000043a7      0x429 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_abbrev  0x00000000000047d0      0x377 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_abbrev  0x0000000000004b47      0x272 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_abbrev  0x0000000000004db9      0x1f9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_abbrev  0x0000000000004fb2      0x2f6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_abbrev  0x00000000000052a8      0x32e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .debug_abbrev  0x00000000000055d6      0x261 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .debug_abbrev  0x0000000000005837      0x277 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_abbrev  0x0000000000005aae      0x28e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_abbrev  0x0000000000005d3c      0x240 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_abbrev  0x0000000000005f7c      0x219 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_abbrev  0x0000000000006195      0x214 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_abbrev  0x00000000000063a9      0x2f5 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_abbrev  0x000000000000669e      0x224 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_abbrev  0x00000000000068c2      0x214 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_abbrev  0x0000000000006ad6      0x225 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_abbrev  0x0000000000006cfb      0x214 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_abbrev  0x0000000000006f0f       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+ .debug_abbrev  0x0000000000006f23       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x0000000000006f37       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+ .debug_abbrev  0x0000000000006f4b       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+ .debug_abbrev  0x0000000000006f5f       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+ .debug_abbrev  0x0000000000006f73       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+ .debug_abbrev  0x0000000000006f87       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+ .debug_abbrev  0x0000000000006f9b       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+ .debug_abbrev  0x0000000000006faf       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+ .debug_abbrev  0x0000000000006fc3       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+ .debug_abbrev  0x0000000000006fd7       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+ .debug_abbrev  0x0000000000006feb       0x14 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+ .debug_abbrev  0x0000000000006fff      0x25f /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .debug_abbrev  0x000000000000725e      0x1e3 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .debug_abbrev  0x0000000000007441       0x93 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .debug_abbrev  0x00000000000074d4       0xe1 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .debug_abbrev  0x00000000000075b5       0x82 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .debug_abbrev  0x0000000000007637       0x93 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .debug_abbrev  0x00000000000076ca       0x94 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .debug_abbrev  0x000000000000775e       0xa6 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .debug_abbrev  0x0000000000007804       0xaf /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .debug_abbrev  0x00000000000078b3       0x9e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .debug_abbrev  0x0000000000007951       0xaf /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+ .debug_abbrev  0x0000000000007a00       0x6b /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+
+.debug_aranges  0x0000000000000000      0x8f0
+ .debug_aranges
+                0x0000000000000000       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000020       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .debug_aranges
+                0x0000000000000040       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .debug_aranges
+                0x0000000000000060       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_aranges
+                0x0000000000000080       0x18 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+ .debug_aranges
+                0x0000000000000098       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_aranges
+                0x00000000000000b8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_aranges
+                0x00000000000000d8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_aranges
+                0x00000000000000f8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_aranges
+                0x0000000000000118       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_aranges
+                0x0000000000000138       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_aranges
+                0x0000000000000158       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x0000000000000178       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_aranges
+                0x0000000000000198       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+ .debug_aranges
+                0x00000000000001b8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_aranges
+                0x00000000000001d8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+ .debug_aranges
+                0x00000000000001f8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .debug_aranges
+                0x0000000000000218       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_aranges
+                0x0000000000000238       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_aranges
+                0x0000000000000258       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_aranges
+                0x0000000000000278       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_aranges
+                0x0000000000000298       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+ .debug_aranges
+                0x00000000000002b8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_aranges
+                0x00000000000002d8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_aranges
+                0x00000000000002f8       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_aranges
+                0x0000000000000318       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_aranges
+                0x0000000000000338       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_aranges
+                0x0000000000000358       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_aranges
+                0x0000000000000378       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+ .debug_aranges
+                0x0000000000000398       0x18 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+ .debug_aranges
+                0x00000000000003b0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_aranges
+                0x00000000000003d0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_aranges
+                0x00000000000003f0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_aranges
+                0x0000000000000410       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_aranges
+                0x0000000000000430       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_aranges
+                0x0000000000000450       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_aranges
+                0x0000000000000470       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .debug_aranges
+                0x0000000000000490       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .debug_aranges
+                0x00000000000004b0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_aranges
+                0x00000000000004d0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_aranges
+                0x00000000000004f0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_aranges
+                0x0000000000000510       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_aranges
+                0x0000000000000530       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_aranges
+                0x0000000000000550       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_aranges
+                0x0000000000000570       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_aranges
+                0x0000000000000590       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_aranges
+                0x00000000000005b0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_aranges
+                0x00000000000005d0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_aranges
+                0x00000000000005f0       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+ .debug_aranges
+                0x0000000000000610       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x0000000000000630       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+ .debug_aranges
+                0x0000000000000650       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+ .debug_aranges
+                0x0000000000000670       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+ .debug_aranges
+                0x0000000000000690       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+ .debug_aranges
+                0x00000000000006b0       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+ .debug_aranges
+                0x00000000000006d0       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+ .debug_aranges
+                0x00000000000006f0       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+ .debug_aranges
+                0x0000000000000710       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+ .debug_aranges
+                0x0000000000000730       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+ .debug_aranges
+                0x0000000000000750       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+ .debug_aranges
+                0x0000000000000770       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .debug_aranges
+                0x0000000000000790       0x20 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .debug_aranges
+                0x00000000000007b0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .debug_aranges
+                0x00000000000007d0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .debug_aranges
+                0x00000000000007f0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .debug_aranges
+                0x0000000000000810       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .debug_aranges
+                0x0000000000000830       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .debug_aranges
+                0x0000000000000850       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .debug_aranges
+                0x0000000000000870       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .debug_aranges
+                0x0000000000000890       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .debug_aranges
+                0x00000000000008b0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+ .debug_aranges
+                0x00000000000008d0       0x20 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+
+.debug_str      0x0000000000000000     0x24e0
+ .debug_str     0x0000000000000000       0xb1 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_str     0x00000000000000b1      0x4c0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+                                        0x57c (size before relaxing)
+ .debug_str     0x0000000000000571      0x350 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+                                        0x964 (size before relaxing)
+ .debug_str     0x00000000000008c1      0x21e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+                                        0x8ee (size before relaxing)
+ .debug_str     0x0000000000000adf       0xb3 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-impure.o)
+                                        0x54c (size before relaxing)
+ .debug_str     0x0000000000000b92       0xfc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+                                        0x781 (size before relaxing)
+ .debug_str     0x0000000000000c8e      0x231 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+                                        0x75b (size before relaxing)
+ .debug_str     0x0000000000000ebf       0xa9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+                                        0x182 (size before relaxing)
+ .debug_str     0x0000000000000f68       0x50 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+                                        0x559 (size before relaxing)
+ .debug_str     0x0000000000000fb8       0xa2 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+                                        0x849 (size before relaxing)
+ .debug_str     0x000000000000105a       0x40 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+                                        0x542 (size before relaxing)
+ .debug_str     0x000000000000109a       0x41 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+                                        0x177 (size before relaxing)
+ .debug_str     0x00000000000010db       0x3a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+                                        0x8a8 (size before relaxing)
+ .debug_str     0x0000000000001115       0x57 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+                                        0x574 (size before relaxing)
+ .debug_str     0x000000000000116c       0x1e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+                                        0x58d (size before relaxing)
+ .debug_str     0x000000000000118a       0x93 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+                                        0x534 (size before relaxing)
+ .debug_str     0x000000000000121d       0x52 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+                                        0x57f (size before relaxing)
+ .debug_str     0x000000000000126f       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+                                        0x6a5 (size before relaxing)
+ .debug_str     0x00000000000012a3       0xa5 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+                                        0x7ba (size before relaxing)
+ .debug_str     0x0000000000001348       0x4a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+                                        0x761 (size before relaxing)
+ .debug_str     0x0000000000001392       0x5a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+                                        0x19b (size before relaxing)
+ .debug_str     0x00000000000013ec       0x41 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memset.o)
+                                         0xb1 (size before relaxing)
+ .debug_str     0x000000000000142d       0x4e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+                                        0x62d (size before relaxing)
+ .debug_str     0x000000000000147b       0x62 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+                                        0x56b (size before relaxing)
+ .debug_str     0x00000000000014dd       0x38 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+                                        0x161 (size before relaxing)
+ .debug_str     0x0000000000001515       0x6f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+                                        0x8ea (size before relaxing)
+ .debug_str     0x0000000000001584       0x4b /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+                                        0x768 (size before relaxing)
+ .debug_str     0x00000000000015cf       0x44 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+                                        0x56b (size before relaxing)
+ .debug_str     0x0000000000001613       0x43 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+                                        0x16b (size before relaxing)
+ .debug_str     0x0000000000001656       0x94 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-ctype_.o)
+                                        0x160 (size before relaxing)
+ .debug_str     0x00000000000016ea       0x67 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+                                        0x5ac (size before relaxing)
+ .debug_str     0x0000000000001751      0x17f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+                                        0x6d3 (size before relaxing)
+ .debug_str     0x00000000000018d0       0x5f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+                                        0x5bb (size before relaxing)
+ .debug_str     0x000000000000192f       0x47 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+                                        0x5de (size before relaxing)
+ .debug_str     0x0000000000001976       0x45 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+                                        0x551 (size before relaxing)
+ .debug_str     0x00000000000019bb      0x165 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+                                        0x6d8 (size before relaxing)
+ .debug_str     0x0000000000001b20       0xfc /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+                                        0x5c2 (size before relaxing)
+ .debug_str     0x0000000000001c1c       0x40 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+                                        0x554 (size before relaxing)
+ .debug_str     0x0000000000001c5c       0x6b /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+                                        0x59e (size before relaxing)
+ .debug_str     0x0000000000001cc7       0x3d /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+                                        0x570 (size before relaxing)
+ .debug_str     0x0000000000001d04       0x48 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+                                        0x767 (size before relaxing)
+ .debug_str     0x0000000000001d4c       0x37 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+                                        0x53d (size before relaxing)
+ .debug_str     0x0000000000001d83       0x37 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+                                        0x536 (size before relaxing)
+ .debug_str     0x0000000000001dba       0x3e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+                                        0x599 (size before relaxing)
+ .debug_str     0x0000000000001df8       0x3d /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+                                        0x681 (size before relaxing)
+ .debug_str     0x0000000000001e35       0x38 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+                                        0x539 (size before relaxing)
+ .debug_str     0x0000000000001e6d       0x37 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+                                        0x54b (size before relaxing)
+ .debug_str     0x0000000000001ea4       0x36 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+                                        0x53a (size before relaxing)
+ .debug_str     0x0000000000001eda       0x81 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_mulsi3.o)
+                                         0x8d (size before relaxing)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_udivsi3.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_divsi3.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_umodsi3.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_modsi3.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_double.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_floatex.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_eqdf2.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_nedf2.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_gtdf2.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ltdf2.o)
+ .debug_str     0x0000000000001f5b       0x8d /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(_ledf2.o)
+ .debug_str     0x0000000000001f5b      0x11e /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+                                        0x1dd (size before relaxing)
+ .debug_str     0x0000000000002079       0xf3 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+                                        0x261 (size before relaxing)
+ .debug_str     0x000000000000216c       0xdf /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+                                        0x180 (size before relaxing)
+ .debug_str     0x000000000000224b       0x4e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+                                        0x2cc (size before relaxing)
+ .debug_str     0x0000000000002299       0x50 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+                                        0x17c (size before relaxing)
+ .debug_str     0x00000000000022e9       0x50 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+                                        0x181 (size before relaxing)
+ .debug_str     0x0000000000002339       0x4c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+                                        0x176 (size before relaxing)
+ .debug_str     0x0000000000002385       0x4e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+                                        0x17e (size before relaxing)
+ .debug_str     0x00000000000023d3       0x4c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+                                        0x17b (size before relaxing)
+ .debug_str     0x000000000000241f       0x40 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+                                         0xe2 (size before relaxing)
+ .debug_str     0x000000000000245f       0x4e /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+                                        0x17e (size before relaxing)
+ .debug_str     0x00000000000024ad       0x33 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+                                        0x146 (size before relaxing)
+
+.debug_loclists
+                0x0000000000000000     0xda92
+ .debug_loclists
+                0x0000000000000000       0x75 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .debug_loclists
+                0x0000000000000075     0x2aed /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .debug_loclists
+                0x0000000000002b62     0x22c5 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_loclists
+                0x0000000000004e27       0x21 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_loclists
+                0x0000000000004e48      0x943 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_loclists
+                0x000000000000578b       0xd3 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_loclists
+                0x000000000000585e     0x1820 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_loclists
+                0x000000000000707e       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_loclists
+                0x0000000000007092       0x25 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_loclists
+                0x00000000000070b7     0x15d4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_loclists
+                0x000000000000868b      0x216 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_loclists
+                0x00000000000088a1       0x71 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .debug_loclists
+                0x0000000000008912      0x3e1 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_loclists
+                0x0000000000008cf3       0x32 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_loclists
+                0x0000000000008d25       0x33 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_loclists
+                0x0000000000008d58      0x2d0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_loclists
+                0x0000000000009028     0x11f3 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_loclists
+                0x000000000000a21b       0xb2 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_loclists
+                0x000000000000a2cd       0x84 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_loclists
+                0x000000000000a351     0x1db4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_loclists
+                0x000000000000c105       0x3a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_loclists
+                0x000000000000c13f       0x1d /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_loclists
+                0x000000000000c15c      0x155 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_loclists
+                0x000000000000c2b1      0x18b /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_loclists
+                0x000000000000c43c      0x11a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_loclists
+                0x000000000000c556      0x3f4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_loclists
+                0x000000000000c94a       0xa4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_loclists
+                0x000000000000c9ee      0x2da /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_loclists
+                0x000000000000ccc8      0x1fa /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .debug_loclists
+                0x000000000000cec2       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .debug_loclists
+                0x000000000000ced6       0x92 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_loclists
+                0x000000000000cf68       0x7b /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_loclists
+                0x000000000000cfe3      0x123 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_loclists
+                0x000000000000d106       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_loclists
+                0x000000000000d11a       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_loclists
+                0x000000000000d12e       0x6c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_loclists
+                0x000000000000d19a       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_loclists
+                0x000000000000d1ae       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_loclists
+                0x000000000000d1c2       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_loclists
+                0x000000000000d1d6       0x14 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_loclists
+                0x000000000000d1ea      0x689 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .debug_loclists
+                0x000000000000d873      0x1eb /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .debug_loclists
+                0x000000000000da5e       0x1f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .debug_loclists
+                0x000000000000da7d       0x15 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+
+.debug_frame    0x0000000000000000     0x1c6c
+ .debug_frame   0x0000000000000000       0x44 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sprintf.o)
+ .debug_frame   0x0000000000000044       0x40 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .debug_frame   0x0000000000000084       0x94 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_frame   0x0000000000000118       0x44 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-localeconv.o)
+ .debug_frame   0x000000000000015c       0xa4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x0000000000000200       0x30 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memchr.o)
+ .debug_frame   0x0000000000000230       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000000264      0x3d8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_frame   0x000000000000063c       0x2c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000000668       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_frame   0x000000000000068c       0xb0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_frame   0x000000000000073c       0x70 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-assert.o)
+ .debug_frame   0x00000000000007ac       0x60 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_frame   0x000000000000080c       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-errno.o)
+ .debug_frame   0x0000000000000830       0x44 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fiprintf.o)
+ .debug_frame   0x0000000000000874       0x90 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-freer.o)
+ .debug_frame   0x0000000000000904       0x94 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_frame   0x0000000000000998       0x38 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x00000000000009d0       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000000a04       0xc0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_frame   0x0000000000000ac4       0xc8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_frame   0x0000000000000b8c       0x2c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-strcmp.o)
+ .debug_frame   0x0000000000000bb8       0xf4 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_frame   0x0000000000000cac       0x34 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x0000000000000ce0       0x48 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_frame   0x0000000000000d28       0x2c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-abort.o)
+ .debug_frame   0x0000000000000d54       0xc8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_frame   0x0000000000000e1c      0x1a0 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-findfp.o)
+ .debug_frame   0x0000000000000fbc       0x70 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_frame   0x000000000000102c      0x108 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000000000001134       0x60 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fwalk.o)
+ .debug_frame   0x0000000000001194       0x54 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_frame   0x00000000000011e8      0x154 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .debug_frame   0x000000000000133c       0x40 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signalr.o)
+ .debug_frame   0x000000000000137c       0xa8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-stdio.o)
+ .debug_frame   0x0000000000001424       0x6c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_frame   0x0000000000001490       0x48 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wcrtomb.o)
+ .debug_frame   0x00000000000014d8       0x30 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-writer.o)
+ .debug_frame   0x0000000000001508       0x2c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-closer.o)
+ .debug_frame   0x0000000000001534       0x7c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_frame   0x00000000000015b0       0x30 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fstatr.o)
+ .debug_frame   0x00000000000015e0       0x2c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-isattyr.o)
+ .debug_frame   0x000000000000160c       0x30 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-lseekr.o)
+ .debug_frame   0x000000000000163c       0x30 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-readr.o)
+ .debug_frame   0x000000000000166c      0x150 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .debug_frame   0x00000000000017bc      0x348 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
+ .debug_frame   0x0000000000001b04       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(close.o)
+ .debug_frame   0x0000000000001b28       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(fstat.o)
+ .debug_frame   0x0000000000001b4c       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(getpid.o)
+ .debug_frame   0x0000000000001b70       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(isatty.o)
+ .debug_frame   0x0000000000001b94       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(kill.o)
+ .debug_frame   0x0000000000001bb8       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(lseek.o)
+ .debug_frame   0x0000000000001bdc       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(read.o)
+ .debug_frame   0x0000000000001c00       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000001c24       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(write.o)
+ .debug_frame   0x0000000000001c48       0x24 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libnosys.a(_exit.o)
+
+.debug_rnglists
+                0x0000000000000000      0x59e
+ .debug_rnglists
+                0x0000000000000000       0xe8 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfprintf.o)
+ .debug_rnglists
+                0x00000000000000e8       0x27 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-dtoa.o)
+ .debug_rnglists
+                0x000000000000010f       0x30 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mallocr.o)
+ .debug_rnglists
+                0x000000000000013f       0x95 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-mprec.o)
+ .debug_rnglists
+                0x00000000000001d4       0x21 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_rnglists
+                0x00000000000001f5       0x30 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-callocr.o)
+ .debug_rnglists
+                0x0000000000000225       0x16 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-locale.o)
+ .debug_rnglists
+                0x000000000000023b       0xb9 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reallocr.o)
+ .debug_rnglists
+                0x00000000000002f4       0x1c /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-reent.o)
+ .debug_rnglists
+                0x0000000000000310       0x9b /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_rnglists
+                0x00000000000003ab       0x15 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wsetup.o)
+ .debug_rnglists
+                0x00000000000003c0       0x56 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fflush.o)
+ .debug_rnglists
+                0x0000000000000416       0x25 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fputwc.o)
+ .debug_rnglists
+                0x000000000000043b       0x26 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fvwrite.o)
+ .debug_rnglists
+                0x0000000000000461       0x2a /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-makebuf.o)
+ .debug_rnglists
+                0x000000000000048b       0x56 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-signal.o)
+ .debug_rnglists
+                0x00000000000004e1       0x15 /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-wbuf.o)
+ .debug_rnglists
+                0x00000000000004f6       0x1f /opt/toolchains/sega/m68k-elf/m68k-elf/lib/libc.a(lib_a-fclose.o)
+ .debug_rnglists
+                0x0000000000000515       0x67 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(fpgnulib.o)
+ .debug_rnglists
+                0x000000000000057c       0x22 /opt/toolchains/sega/m68k-elf/lib/gcc/m68k-elf/12.1.0/libgcc.a(xfgnulib.o)
