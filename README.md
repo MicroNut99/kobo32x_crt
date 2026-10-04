@@ -2,7 +2,7 @@
 
 ## This is a specialized build of the Kobo Deluxe port for the Sega 32X. 
 A standard Sega CD / 32XCD releases, 
-This version is engineered specifically to execute entirely from the real hardware or a standard Everdrive ROM cart.
+This version is engineered specifically to execute entirely from the real hardware or a standard Everdrive ROM cartridge.
 
 ## Build Requirements
 To compile this project from source, you must use Chilly Willy's Sega MD/CD/32X devkit (sh-elf + m68k-elf GCC).
