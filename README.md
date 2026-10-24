@@ -10,26 +10,22 @@ This version is engineered specifically to execute entirely from the real hardwa
 - **Chilly Willy's Sega MD/CD/32X devkit** (sh-elf + m68k-elf GCC 12.1), from the 32XDK releases page:
   https://github.com/viciious/32XDK/releases. The default location is `/opt/toolchains/sega`. The original setup
   keeps this project inside the toolchain folder, as `sega-toolchain-12.1/sega/kobo32x_crt`.
-- **python3.** Only the music disc (below) needs more.
+- **python3.** The music disc (below) also needs numpy on Python 3.13+.
 
-### One command (a fresh download)
+### One command
 ```bash
 cd kobo32x_crt
-bash build_fresh.sh                          # toolchain in /opt/toolchains/sega
-GENDEV=/path/to/sega bash build_fresh.sh     # toolchain somewhere else
+bash build.sh                                # toolchain in /opt/toolchains/sega
+GENDEV=/path/to/sega bash build.sh           # toolchain somewhere else
 ```
 The output is **`KOBO32X_CART.32x`** (4 MB). Run it in Fusion as a 32X cartridge, or on the EverDrive.
 The compiler prints some warnings (unused functions, `pri_start`); they are expected.
-`build_fresh.sh` takes **no arguments**. Its only setting is the `GENDEV` environment variable (the
-toolchain folder). It uses the copy of D32XR's Sega CD files kept in `d32xr/` (or `../d32xr-v33/src-md/`
-if that exists), and reads the game files from `subcpu/ROMs/` (or `subcpu/ROMS/`).
+`build.sh` takes **no arguments**. Its only setting is the `GENDEV` environment variable (the toolchain
+folder). It works from a fresh download. It uses the copy of D32XR's Sega CD files kept in `d32xr/`, or
+`../d32xr-v33/src-md/` when that exists (the original dev-folder layout), and reads the game files from
+`subcpu/ROMs/`. `build_fresh.sh` still works: it just runs `build.sh`.
 
-`build.sh` is the original dev-folder script: the same steps, but it needs D32XR v33 built next to this
-folder (`../d32xr-v33/src-md/cd/cd.bin`). It always uses `/opt/toolchains/sega`, and reads
-`subcpu/ROMS/` (on a case-sensitive file system: rename `subcpu/ROMs` to `ROMS`). On a fresh download, use
-`build_fresh.sh`.
-
-### Step by step (what `build_fresh.sh` runs)
+### Step by step (what `build.sh` runs)
 ```bash
 TC=/opt/toolchains/sega/m68k-elf/bin/m68k-elf-
 cd sh2 && make clean && make                       # Kobo's SH2 program -> sh2/D32XR.32x   (make GENDEV=... works too)
@@ -64,9 +60,8 @@ python3 tools/make_mixed_cd2.py subcpu/CDROMPlayer.iso subcpu/Track02.wav subcpu
 Options: `--out NAME` (default `<iso name>_mixed`); `--mode2` (data track as MODE2/2352 instead of
 MODE1/2352); `--pregap N` (silent sectors before each audio track; default 150 = Red Book's 2 s; 0 = no gap).
 
-The WAVs are 48 kHz and a CD needs 44.1 kHz. The script converts them with Python's `audioop`, which
-**Python 3.13 removed**. Use Python 3.12 or older, or `pip install audioop-lts` on 3.13+. Or convert them
-first: `ffmpeg -i Track02.wav -ar 44100 -ac 2 -sample_fmt s16 Track02_44k.wav`.
+The WAVs are 48 kHz and a CD needs 44.1 kHz. The script converts them with Python's `audioop` on Python
+3.12 and older, or with numpy on 3.13+ (`pip install numpy`); both give the same bytes.
 
 ### Compile-time switches
 There are no command-line switches for the game itself. These are `#define`s in `sh2/sh2_main.c`: edit the

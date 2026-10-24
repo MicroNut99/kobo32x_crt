@@ -26,8 +26,9 @@ add  --pregap 150  (the gap then goes into the .bin and the cue gets INDEX 00 / 
 subheader 00 00 08 00 twice, 2048 data, 4 EDC over subheader+data, 276 P/Q with the header counted as zero) and the
 cue says  TRACK 01 MODE2/2352.  The 2048 data bytes are the same as in the ISO; only the sector wrapper differs.
 
-The WAV must be PCM.  If it is not 16-bit / 44.1 kHz / stereo it is converted when Python has the 'audioop'
-module (Python up to 3.12); otherwise convert it first:
+The WAV must be PCM.  If it is not 16-bit / 44.1 kHz / stereo it is converted: with Python's 'audioop' module
+(Python up to 3.12, or pip install audioop-lts), or on Python 3.13+ with numpy, which gives the same bytes.  With
+neither, convert it first:
     ffmpeg -i in.wav -ar 44100 -ac 2 -sample_fmt s16 Track02.wav
 """
 import argparse, os, struct, sys, wave
@@ -114,6 +115,46 @@ def mode2f1_sector(lba, data):
 
 
 # ------------------------------------------------------------------ audio
+def convert_numpy(data, ch, width, rate):
+    """What audioop.lin2lin / tostereo / ratecv(..., None) do, with numpy, for Python 3.13+ (which dropped
+    audioop).  Same arithmetic as CPython's audioop.c, so the disc comes out byte for byte the same."""
+    import numpy as np
+    from math import gcd
+    b = np.frombuffer(data, dtype=np.uint8)
+    if width == 1:                             # (audioop reads 8-bit as signed, like this)
+        s = b.view(np.int8).astype(np.int64) << 8
+    elif width == 2:
+        s = b.view("<i2").astype(np.int64)
+    elif width == 3:
+        t = b.reshape(-1, 3).astype(np.int64)
+        s = ((t[:, 0] | (t[:, 1] << 8) | (t[:, 2] << 16)) ^ 0x800000) - 0x800000
+        s = s >> 8
+    elif width == 4:
+        s = b.view("<i4").astype(np.int64) >> 16
+    else:
+        sys.exit("%d-byte samples: use 8, 16, 24 or 32 bit" % width)
+    if ch == 1:
+        s = np.repeat(s, 2)
+    elif ch != 2:
+        sys.exit("%d channels; use 1 or 2" % ch)
+    if rate != 44100:
+        g = gcd(rate, 44100)
+        inr, outr = rate // g, 44100 // g
+        x = s.reshape(-1, 2) << 16             # audioop works on 32-bit samples
+        n_in = len(x)
+        # output j is made after n_j inputs: the smallest n with -outr + outr*n - inr*j >= 0
+        j_max = (outr * n_in - outr) // inr     # the last j whose n_j <= n_in
+        j = np.arange(j_max + 1, dtype=np.int64)
+        n = (outr + inr * j + outr - 1) // outr
+        d = (outr * n - outr - inr * j).astype(np.float64)
+        cur = x[n - 1].astype(np.float64)
+        prev = np.where((n >= 2)[:, None], x[np.maximum(n - 2, 0)], 0).astype(np.float64)
+        o = np.trunc((prev * d[:, None] + cur * (outr - d)[:, None]) / outr).astype(np.int64)
+        s = (o >> 16).reshape(-1)
+    return s.astype("<i2").tobytes()
+
+
+
 def wav_to_pcm(path):
     try:
         w = wave.open(path, "rb")
@@ -124,17 +165,25 @@ def wav_to_pcm(path):
     w.close()
     if (ch, width, rate) != (2, 2, 44100):
         try:
-            import audioop
+            import audioop                     # Python 3.12 and older (or pip install audioop-lts)
         except ImportError:
-            sys.exit("%s is %d ch / %d bit / %d Hz and this Python has no audioop.\n  convert it:  ffmpeg -i in.wav -ar 44100 -ac 2 -sample_fmt s16 out.wav" % (path, ch, width * 8, rate))
-        if width != 2:
-            data = audioop.lin2lin(data, width, 2)
-        if ch == 1:
-            data = audioop.tostereo(data, 2, 1, 1)
-        elif ch != 2:
-            sys.exit("%s has %d channels; use 1 or 2" % (path, ch))
-        if rate != 44100:
-            data, _ = audioop.ratecv(data, 2, 2, rate, 44100, None)
+            audioop = None
+        if audioop is None:
+            try:
+                data = convert_numpy(data, ch, width, rate)   # Python 3.13+: the same conversion, bit for bit
+            except ImportError:
+                sys.exit("%s is %d ch / %d bit / %d Hz: converting it needs Python's audioop (Python 3.12 or older, or\n"
+                         "  pip install audioop-lts) or numpy (pip install numpy).  Or convert it first:\n"
+                         "  ffmpeg -i in.wav -ar 44100 -ac 2 -sample_fmt s16 out.wav" % (path, ch, width * 8, rate))
+        else:
+            if width != 2:
+                data = audioop.lin2lin(data, width, 2)
+            if ch == 1:
+                data = audioop.tostereo(data, 2, 1, 1)
+            elif ch != 2:
+                sys.exit("%s has %d channels; use 1 or 2" % (path, ch))
+            if rate != 44100:
+                data, _ = audioop.ratecv(data, 2, 2, rate, 44100, None)
         print("  converted %s (%d ch, %d bit, %d Hz) to 16 bit stereo 44.1 kHz" % (path, ch, width * 8, rate))
     return data
 

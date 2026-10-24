@@ -19,10 +19,10 @@ This folder is **not part of the cartridge build**. It is kept for the files the
 cd ..
 python3 tools/make_mixed_cd2.py subcpu/CDROMPlayer.iso subcpu/Track02.wav subcpu/Track03.wav subcpu/Track04.wav --out KOBO32X_CART
 ```
-  The WAVs are 48 kHz, so this needs Python 3.12 or older (or `pip install audioop-lts`), or WAVs
-  converted to 44.1 kHz first. Options: `--out NAME`, `--mode2`, `--pregap N` (default 150).
+  The WAVs are 48 kHz. The script converts them to 44.1 kHz with `audioop` (Python 3.12 and older) or
+  numpy (3.13+). Options: `--out NAME`, `--mode2`, `--pregap N` (default 150).
 
-Build the cartridge ROM from the top folder with **`bash build_fresh.sh`** (see `../README.md`).
+Build the cartridge ROM from the top folder with **`bash build.sh`** (see `../README.md`).
 
 ## "ROM Loader for the Mega 32X RAM Cart" Credits
 * Programming : Chilly Willy and Victor Luchits

@@ -1,4 +1,4 @@
-ifdef $(GENDEV)
+ifdef GENDEV
 ROOTDIR = $(GENDEV)
 else
 ROOTDIR = /opt/toolchains/sega
@@ -33,10 +33,11 @@ RM = rm -rf
 
 TARGET = CDROMPlayer
 # ---------------------------------------------------------------------------------------------
+# ROMs/ (this exact case: Linux and macOS tell ROMs and ROMS apart) holds the game files.
 # KOBO: the SH2 program is built in ../sh2 as D32XR.32x.  It is copied (renamed) to
-# ROMS/$(SH2_PAYLOAD) on EVERY build, files.s builds it into the program from there (relative
+# ROMs/$(SH2_PAYLOAD) on EVERY build, files.s builds it into the program from there (relative
 # path - the old files.s pointed at the J: folder, so S: builds used the old SH2 program), and
-# it is also put on the disc.  Keep KOBOGFX.BIN in ROMS/ too: "make clean" deletes *.bin here.
+# it is also put on the disc.  Keep KOBOGFX.BIN in ROMs/ too: "make clean" deletes *.bin here.
 # If you rename SH2_PAYLOAD, change the .incbin line in files.s to match.
 # ---------------------------------------------------------------------------------------------
 SH2_BUILD   = ../sh2/D32XR.32x
@@ -52,12 +53,12 @@ FILES = files.o
 FORCE:
 
 # always refresh the renamed SH2 program (FORCE), then rebuild files.o from it
-ROMS/$(SH2_PAYLOAD): FORCE
+ROMs/$(SH2_PAYLOAD): FORCE
 	@test -f $(SH2_BUILD) || { echo "*** $(SH2_BUILD) missing - build ../sh2 first ***"; exit 1; }
-	mkdir -p ROMS
-	cp -v $(SH2_BUILD) ROMS/$(SH2_PAYLOAD)
+	mkdir -p ROMs
+	cp -v $(SH2_BUILD) ROMs/$(SH2_PAYLOAD)
 
-files.o: files.s ROMS/$(SH2_PAYLOAD)
+files.o: files.s ROMs/$(SH2_PAYLOAD)
 	$(AS) $(ASFLAGS) $(INCPATH) files.s -o files.o
 
 all: src-cd32x/SRAMTest32X.bin $(TARGET).bin
@@ -97,9 +98,9 @@ cd: $(TARGET).bin
 	rm -rf cd
 	mkdir -p cd
 	cp $(TARGET).bin cd/APP.BIN
-	@# K10: ROMS/ FIRST.  "make clean" only removes lowercase *.bin, so an old Demo/KOBOGFX.BIN
-	@# survived and was put on the disc instead of ROMS/KOBOGFX.BIN.
-	for f in $(IMAGE_FILES); do if [ -f ROMS/$$f ]; then cp -v ROMS/$$f cd/$$f; elif [ -f $$f ]; then cp -v $$f cd/$$f; echo "note: $$f taken from Demo/, not ROMS/"; else echo "note: $$f not found in ROMS/ or this folder"; fi; done
+	@# K10: ROMs/ FIRST.  "make clean" only removes lowercase *.bin, so an old Demo/KOBOGFX.BIN
+	@# survived and was put on the disc instead of ROMs/KOBOGFX.BIN.
+	for f in $(IMAGE_FILES); do if [ -f ROMs/$$f ]; then cp -v ROMs/$$f cd/$$f; elif [ -f $$f ]; then cp -v $$f cd/$$f; echo "note: $$f taken from Demo/, not ROMs/"; else echo "note: $$f not found in ROMs/ or this folder"; fi; done
 	@echo "cd folder now holds:"; ls -1 cd
 	genisoimage -sysid "SEGA SEGACD" -volid "SRAMTEST" -generic-boot $(BOOTBLOCK) -full-iso9660-filenames -o $(TARGET).iso cd
 
