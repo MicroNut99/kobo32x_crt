@@ -15,6 +15,8 @@ TARGET = D32XR
 
 # Compiler flags for SH-2 architecture
 CFLAGS = -c -std=c11 -m2 -mb -O2 -Wall -ffunction-sections -fdata-sections -D__32X__ -DMARS
+# K38: build.sh passes KOBO_DEFS=-DKOBO_STANDALONE=1 for the standalone cartridge (empty: the normal one)
+CFLAGS += $(KOBO_DEFS)
 # Linker flags pointing to the correct 32X SDRAM linker script
 LDFLAGS = -EB -T sh2_sdram.ld -nostdlib -Map=output.map
 

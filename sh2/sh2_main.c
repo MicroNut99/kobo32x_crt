@@ -42,6 +42,14 @@ void sec_dma1_handler(void) {}
 #define PWM_MID    707
 volatile uint8_t pwm_mail[8];
 volatile uint8_t pwm_widx;
+/* K38 STANDALONE BUILD (KOBO32X_STANDALONE.32x; `STANDALONE=1 bash build.sh`): 1 = the cartridge needs no
+   Sega CD at all - the music is in the ROM and the high scores / options go to cartridge save RAM.
+   0 = the normal cartridge (KOBO32X_CART.32x), byte for byte what it was before K38: music from the
+   Sega CD's disc, nothing saved.  Everything K38 added is inside #if KOBO_STANDALONE. */
+#ifndef KOBO_STANDALONE
+#define KOBO_STANDALONE 0
+#endif
+#if KOBO_STANDALONE
 /* K38: MUSIC FROM THE ROM - one more voice in this mixer, so the cartridge needs no Sega CD for it.
    KOBOMUS.BIN (tools/kobo_music.py) in ROM at 0x020000: "KMUS", count, rate, table at +8 (offset,
    length, volume, repeat - 12 bytes a track), then 8-bit signed samples at the mixer's own rate
@@ -55,6 +63,7 @@ volatile uint8_t pwm_widx;
 volatile uint8_t mus_req, mus_seq;
 volatile uint8_t pwm_hold, pwm_held;
 #define UNCACHED8(v) ((volatile uint8_t *)((uint32_t)&(v) | 0x20000000))
+#endif
 void pwm_post(int id) {
     volatile uint8_t *m = (volatile uint8_t *)((uint32_t)pwm_mail | 0x20000000);
     volatile uint8_t *w = (volatile uint8_t *)((uint32_t)&pwm_widx | 0x20000000);
@@ -68,24 +77,30 @@ void secondary(void) {
     volatile uint8_t *m = (volatile uint8_t *)((uint32_t)pwm_mail | 0x20000000);
     volatile uint8_t *w = (volatile uint8_t *)((uint32_t)&pwm_widx | 0x20000000);
     const volatile uint8_t *img = SFX_PACK + 256;
+#if KOBO_STANDALONE
     const volatile uint32_t *mdir = (const volatile uint32_t *)(MUS_PACK + 8);
     const volatile uint8_t *mdat = MUS_PACK;
     uint32_t mpos = 0, mstart = 0, mend = 0;
     int mon = 0, mrep = 0, mvol = 128, mn;
-    uint8_t ridx, mseen;
+    uint8_t mseen;
+#endif
+    uint8_t ridx;
     int n, i, next = 0;
     MARS_SYS_INTMSK |= 0x0002;
     __asm__ __volatile__("ldc %0,sr" : : "r"(0) : "memory");
     for (i = 0; i < 4; i++) on[i] = 0;
     n = (SFX_PACK[0] == 'K' && SFX_PACK[1] == 'S') ? ((SFX_PACK[4] << 8) | SFX_PACK[5]) : 0;
-    mn = (MUS_PACK[0] == 'K' && MUS_PACK[1] == 'M' && MUS_PACK[2] == 'U' && MUS_PACK[3] == 'S') ? MUS_PACK[5] : 0;
     ridx = *w;
+#if KOBO_STANDALONE
+    mn = (MUS_PACK[0] == 'K' && MUS_PACK[1] == 'M' && MUS_PACK[2] == 'U' && MUS_PACK[3] == 'S') ? MUS_PACK[5] : 0;
     mseen = 0;                                             /* (mus_seq starts at 0: .bss, cleared before this runs) */
+#endif
     PWM_MONO = 1; PWM_MONO = 1; PWM_MONO = 1;
     PWM_CYCLE = PWM_CYC;
     PWM_CTRL = 0x0185;
     while (1) {
         int mix = PWM_MID;
+#if KOBO_STANDALONE
         if (*UNCACHED8(pwm_hold)) {                        /* K38: the 68000 has the cartridge (RV = 1) */
             *UNCACHED8(pwm_held) = 1;
             while (*UNCACHED8(pwm_hold)) { }
@@ -109,6 +124,7 @@ void secondary(void) {
             if (sv < 0) mix -= (int)mag; else mix += (int)mag;
             if (++mpos >= mend) { if (mrep) mpos = mstart; else mon = 0; }
         }
+#endif
         while (ridx != *w) {
             int id = m[ridx & 7];
             ridx++;
@@ -231,12 +247,13 @@ __attribute__((used)) const char sh2_build_marker[] = "SH2-KOBO-32X-CARTRIDGE";
                                       F = frames per second.  0 = off (release). */
 #define KOBO_HW_PCM     1          /* HW2: 1 = load the sound pack into the PCM chip (CMD 53).  0 = no
                                       sound effects (music still plays).  Turned on in HW3 if HW2 works. */
-#define KOBO_HW_BRAM    1          /* HW2: 1 = high scores/options saved.  0 = kept for this session only.
-                                      K38: the cartridge saves them in its own save RAM (cart/cart_md.s
-                                      CMD 56-59; ROM header "RA", 0x200001-0x203FFF) - no Sega CD needed. */
-#define KOBO_ROM_MUSIC  1          /* K38: the music in the ROM (KOBOMUS.BIN, played by the slave SH2's PWM mixer).
-                                      1 = when there is no Sega CD with a music disc in it (then the CD plays, as
-                                      before); 2 = always, the CD is never used for music; 0 = CD music only. */
+#define KOBO_HW_BRAM    1          /* HW2: 1 = high scores/options in backup RAM (BIOS _BURAM).  0 = kept
+                                      for this session only.  Turned on in HW4.
+                                      K38, the standalone build: the cartridge's own save RAM (cart/cart_md.s
+                                      CMD 56-59; ROM header "RA", 0x200001-0x203FFF). */
+#define KOBO_ROM_MUSIC  1          /* K38, the standalone build only: the music in the ROM (KOBOMUS.BIN, played by
+                                      the slave SH2's PWM mixer).  1 = unless a Sega CD with a music disc is there
+                                      (then the CD plays); 2 = always, the CD is never used for music; 0 = CD only. */
 #define KOBO_HW_QUIET   0          /* HW9: 1 = after 4B10 the SH2 sends NOTHING (no pad requests); pad = 0.
                                       Must match subcpu/main.c.  The controller does not work in this test. */
 #define KOBO_SPLASH     1          /* K30: 1 = IMAGE.RAW splash while loading (+ SPLASH_HOLD),
@@ -246,7 +263,7 @@ __attribute__((used)) const char sh2_build_marker[] = "SH2-KOBO-32X-CARTRIDGE";
                                       is drawn in that space instead.  The grid code stays. */
 #define KOBO_DEBUG_KEYS 0          /* K27: 1 = X (6-button pad) skips to the next level (testing).
                                       Set 0 for the finished game. */
-#define KOBO_VERSION    38         /* shown as "K30" top of the strip + version colour block */
+#define KOBO_VERSION    (37 + KOBO_STANDALONE)        /* shown as "K30" top of the strip + version colour block */
 
 /* ---- 32X registers (SH2 side, cache-through addresses) ---------------------------- */
 #define SC_COMM2         (*(volatile uint16_t *)0x20004022)
@@ -292,7 +309,7 @@ __attribute__((used)) const char sh2_build_marker[] = "SH2-KOBO-32X-CARTRIDGE";
 #define FILE_KOBOGFX      16      /* main.c maps file number 16 to "KOBOGFX.BIN"   */
 #define CART_RAM_SH2      0x22000000
 #define CART_SLOT_SIZE    0x20000 /* main.c: cart offset = file number * 0x20000    */
-#if KOBO_ROMCART
+#if KOBO_ROMCART && KOBO_STANDALONE
 #define PACK_CART_OFF     0x210000    /* K38: KOBOGFX.BIN in the ROM.  It was at 0x200000: that is where the save
                                          RAM sits (0x200001-0x203FFF, switched in by 0xA130F1), and an emulator or
                                          flash cart that leaves it switched in would show save RAM in place of the
@@ -1309,24 +1326,29 @@ static void cache_tilesets(void) {
 /* K34: switch the CD music track (CMD 45, the unchanged audio path; the Sub-CPU's
    cdda_start stops the current track and plays + repeats the new one).  Only audio - no
    CD data read, so the rule "no data reads after the music starts" still holds. */
+#if KOBO_STANDALONE
 static int cd_music = 0;       /* K38: 1 = the music comes from the CD (a Sega CD with the music disc) */
 /* K38: ask the slave SH2's mixer for ROM music 1.. (0 = silence).  CD tracks 2, 3, 4 = ROM music 1, 2, 3. */
 static void rom_music(int n) {
     *UNCACHED8(mus_req) = (uint8_t)n;
     *UNCACHED8(mus_seq) = (uint8_t)(*UNCACHED8(mus_seq) + 1);
 }
+#endif
 static void music(int track) {
 #if CDDA_ENABLE
+#if KOBO_STANDALONE
     if (!cd_music) {                                       /* K38: no CD music -> the ROM's */
         rom_music(KOBO_ROM_MUSIC && opt_music ? track - 1 : 0);
         return;
     }
+#endif
     if (!opt_music) { wait_cmd(54); return; }              /* K36: music off = CMD 54 (stop) */
     SC_COMM2 = (uint16_t)track; wait_cmd(CMD_PLAY_CDDA);
 #else
     (void)track;
 #endif
 }
+#if KOBO_STANDALONE
 /* K38: where the music comes from.  Asked once, just before the first track (the drive has had the
    splash's seconds to read its table of contents); "not ready" is asked again for up to ~3 s. */
 static void find_music(void) {
@@ -1349,6 +1371,7 @@ static void find_music(void) {
 #endif
     (void)hw; (void)tries;
 }
+#endif
 
 /* K36 HIGH SCORES + SAVE (128 bytes; CMD 56-59):
    bytes 0-3 "KD01", 4 music, 5 sound fx, 6 fire buttons, 8.. 10 entries x 8 bytes
@@ -1370,6 +1393,7 @@ static void hs_defaults(void) {
         hs[i].level = (uint8_t)(10 - i); hs[i].score = (uint32_t)(1000 - i * 100);
     }
 }
+#if KOBO_STANDALONE
 static void rom_hold(int on) {                 /* K38: 1 = park the slave's mixer off the ROM, 0 = let it go */
     uint32_t n;
     *UNCACHED8(pwm_hold) = (uint8_t)on;
@@ -1381,6 +1405,9 @@ static uint16_t save_sum(void) {               /* K38: checksum over bytes 0-123
     for (i = 0; i < 124; i++) sum = (uint16_t)(sum * 31 + save_buf[i]);
     return sum;
 }
+#else
+#define rom_hold(on) ((void)0)
+#endif
 static void save_game(void) {
     int i;
 #if !KOBO_HW_BRAM
@@ -1397,7 +1424,9 @@ static void save_game(void) {
         e[4] = (uint8_t)(hs[i].score >> 24); e[5] = (uint8_t)(hs[i].score >> 16);
         e[6] = (uint8_t)(hs[i].score >> 8);  e[7] = (uint8_t)hs[i].score;
     }
+#if KOBO_STANDALONE
     { uint16_t sum = save_sum(); save_buf[124] = (uint8_t)(sum >> 8); save_buf[125] = (uint8_t)sum; }
+#endif
     for (i = 0; i < 64; i++) {
         SC_COMM2 = (uint16_t)i; SC_COMM8 = (uint16_t)((save_buf[i * 2] << 8) | save_buf[i * 2 + 1]);
         wait_cmd(58);
@@ -1422,7 +1451,9 @@ static void load_game(void) {
         save_buf[i * 2] = (uint8_t)(v >> 8); save_buf[i * 2 + 1] = (uint8_t)v;
     }
     if (save_buf[0] != 'K' || save_buf[1] != 'D' || save_buf[2] != '0' || save_buf[3] != '1') return;
+#if KOBO_STANDALONE
     if (save_buf[124] != (uint8_t)(save_sum() >> 8) || save_buf[125] != (uint8_t)save_sum()) return;   /* K38 */
+#endif
     opt_music = save_buf[4] & 1; opt_sfx = save_buf[5] & 1; opt_fire = 0;   /* K37g: fire option gone */
     opt_skill = save_buf[7] < NUM_SKILLS ? save_buf[7] : SKILL_CLASSIC;     /* DIFFICULTY */
     for (i = 0; i < 10; i++) {
@@ -2792,9 +2823,12 @@ int main(void) {
        started -> the track kept "playing" but was silent (the old inaudible-audio bug).
        From here on nothing reads the CD (tile sets come from the frame-buffer cache). ---- */
 #if CDDA_ENABLE
+#if KOBO_STANDALONE
     find_music();                     /* K38: the CD's music if a Sega CD with the music disc is there, else the ROM's */
     if (!cd_music) music(CDDA_TRACK);
-    else if (opt_music) { SC_COMM2 = CDDA_TRACK; wait_cmd(CMD_PLAY_CDDA); }   /* AUDIO - call unchanged; K36: option */
+    else
+#endif
+    if (opt_music) { SC_COMM2 = CDDA_TRACK; wait_cmd(CMD_PLAY_CDDA); }   /* AUDIO - call unchanged; K36: option */
     else wait_cmd(54);                /* HW7: music off -> stop the drive (BIOS MSCSTOP) after loading */
     show_status(ST_MUSIC_OK);         /* HW2 */
 #endif
@@ -2972,7 +3006,8 @@ int main(void) {
                 font_text(80, 90 + i * 18, l);
             }
             draw_sprite(player_gfx + 4 * SHIP_W * SHIP_H, SHIP_W, SHIP_H, 56, 90 + opt_sel * 18 - 6);
-            font_center(180, bram_ok ? "SAVED IN CARTRIDGE" : "NO SAVE RAM");
+            font_center(180, bram_ok ? (KOBO_STANDALONE ? "SAVED IN CARTRIDGE" : "SAVED IN BACKUP RAM")
+                                     : (KOBO_STANDALONE ? "NO SAVE RAM" : "NO BACKUP RAM"));
         } else if (game_state == 5) {
             /* ---------------- K36 HIGH SCORES: A/B/C (after 1 s) -> menu ------------------- */
             int i;

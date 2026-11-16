@@ -12,6 +12,11 @@
 |     48  pad          COMM8 = pad bits, COMM10 = 68000 frame counter (Kobo's clock)
 |     52  text on/off  COMM2 = 1 on / 0 off (Genesis display; Kobo keeps it off)
 |     53  sound pack   COMM12 = 0: no sound effects        (C2: Sega CD PCM)
+|     56/59 backup RAM COMM12 = 0: "NO BACKUP RAM"         (C2: Sega CD backup RAM)
+|     57  BRAM word    COMM8 = 0
+|     45/54/58 and anything else: acknowledged             (C2: CD music)
+| K38 STANDALONE BUILD (assembled with --defsym STANDALONE=1; KOBO32X_STANDALONE.32x): the cartridge
+| needs no Sega CD - in place of the three lines for 56 / 59 / 57 above:
 |     56  load the save   the cartridge's save RAM -> save_buf; COMM12 = 1 if the save RAM works   (K38)
 |     57  save word       COMM8 = save_buf word COMM2                                               (K38)
 |     58  save word       save_buf word COMM2 = COMM8                                               (K38)
@@ -114,8 +119,10 @@ main:
         bne.b   2b
         move.b  #0,0xA15107                     | RV off
         move.w  #0,0xA15104                     | cartridge bank 0
+.ifdef STANDALONE
         jsr     sram_off                        | K38: save RAM switched out (the SH2s are still in their
                                                 |      start-up wait: nothing reads the ROM yet)
+.endif
         move.l  #0,COMM0
         move.l  #0,COMM4
 
@@ -136,6 +143,7 @@ loop:
         bne.b   loop
         moveq   #0,d1
         move.b  d0,d1                           | low byte = command (high byte: effect id)
+.ifdef STANDALONE
         cmpi.b  #48,d1
         beq.b   c_pad
         cmpi.b  #52,d1
@@ -246,6 +254,62 @@ c_hw:
 done:
         move.w  #0,COMM0                        | command finished
         bra     loop
+.else
+        cmpi.b  #48,d1
+        beq.b   c_pad
+        cmpi.b  #52,d1
+        beq.b   c_text
+        cmpi.b  #53,d1
+        beq.b   c_zero12
+        cmpi.b  #56,d1
+        beq.b   c_zero12
+        cmpi.b  #59,d1
+        beq.b   c_zero12
+        cmpi.b  #57,d1
+        beq.b   c_zero8
+        cmpi.b  #45,d1
+        beq.b   c_music
+        cmpi.b  #54,d1
+        beq.b   c_stop
+        bra.b   done                            | 58, anything else: acknowledge
+
+c_pad:
+        move.w  pad1,d2
+        swap    d2
+        move.w  ticks,d2
+        move.l  d2,COMM8                        | COMM8 = pad, COMM10 = frame counter
+        bra.b   done
+c_text:
+        move.w  #0x8134,d2                      | off
+        tst.w   COMM2
+        beq.b   4f
+        move.w  #0x8174,d2                      | on
+4:      move.w  d2,VDP_CTRL
+        bra.b   done
+c_zero12:
+        move.w  #0,COMM12                       | 0 = not available (no Sega CD yet)
+        bra.b   done
+c_music:                                        | C2: CD audio track COMM2, repeating
+        tst.w   cd_ok
+        beq.b   done
+        move.l  #1,-(sp)
+        moveq   #0,d0
+        move.w  COMM2,d0
+        move.l  d0,-(sp)
+        jsr     scd_play_cdda_track
+        addq.l  #8,sp
+        bra.b   done
+c_stop:
+        tst.w   cd_ok
+        beq.b   done
+        jsr     scd_stop_cdda_playback
+        bra.b   done
+c_zero8:
+        move.w  #0,COMM8
+done:
+        move.w  #0,COMM0                        | command finished
+        bra     loop
+.endif
 
 pause:                                          | ~0.25 ms between COMM0 reads
         move.w  #200,d3
@@ -342,6 +406,7 @@ Sub_Start:
         .incbin "cd.bin"
 Sub_End:
 
+.ifdef STANDALONE
 | ---- K38: save RAM access - IN GENESIS RAM (.data is copied there at start): with RV = 1 the ROM
 |      this program runs from is not at 0x880000 any more ---------------------------------------
 |   d0 = 0  save RAM -> save_buf                      returns d0 = 1
@@ -407,13 +472,16 @@ sram_off:                                       | at start: the save RAM out of 
         move.w  (sp)+,sr
         rts
 
+.endif
         .bss
         .align  2
         .global gen_lvl2, vblank_vector
 gen_lvl2:       .space  2
 cd_ok:          .space  2
 vblank_vector:  .space  4
+.ifdef STANDALONE
 save_buf:       .space  128                     | K38: the save, as Kobo sends and reads it
+.endif
 
         .text
         .global mystrlen, bump_fm, scd_init_pcm

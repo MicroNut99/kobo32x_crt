@@ -6,13 +6,20 @@
 # is used instead when it is there (the original dev folder layout); GENDEV picks the toolchain
 # (default /opt/toolchains/sega); the game files are read from subcpu/ROMs (or subcpu/ROMS).
 # (build_fresh.sh runs this same script.)
+# STANDALONE=1 bash build.sh  (or: bash build_standalone.sh)  builds KOBO32X_STANDALONE.32x instead - the
+# one-off that needs no Sega CD: the music is in the ROM (subcpu/ROMs/KOBOMUS.BIN, tools/kobo_music.py)
+# and high scores / options are saved in the cartridge.  Without it: KOBO32X_CART.32x, as always.
 set -e
 HERE="$(cd "$(dirname "$0")" && pwd)"
+OUT="KOBO32X_CART.32x"; KOBO_DEFS=""; ASDEF=""; CARTOPT=""
+if [ "${STANDALONE:-0}" = 1 ]; then
+  OUT="KOBO32X_STANDALONE.32x"; KOBO_DEFS="-DKOBO_STANDALONE=1"; ASDEF="--defsym STANDALONE=1"; CARTOPT="--standalone"
+fi
 TC="${GENDEV:-/opt/toolchains/sega}/m68k-elf/bin/m68k-elf-"
 grep -q '^#define KOBO_ROMCART 1' "$HERE/sh2/sh2_main.c" \
   || { echo "*** sh2/sh2_main.c is not the cartridge version (KOBO_ROMCART 1)"; exit 1; }
 echo "==> SH2 (Kobo)"
-cd "$HERE/sh2" && make clean && make
+cd "$HERE/sh2" && make clean && make KOBO_DEFS="$KOBO_DEFS"
 echo "==> 68000 (cart/cart_md.s, linked at 0x880800)"
 cd "$HERE/cart"
 # C2: D32XR's Sega CD code (proven): scd.c (InitCD, CD audio), kos.s (BIOS unpacker), cd/cd.bin
@@ -21,7 +28,7 @@ D32="$HERE/d32xr"
 [ -f "$HERE/../d32xr-v33/src-md/cd/cd.bin" ] && D32="$HERE/../d32xr-v33/src-md"
 [ -f "$D32/cd/cd.bin" ] || { echo "*** $D32/cd/cd.bin missing"; exit 1; }
 cp "$D32/cd/cd.bin" cd.bin
-${TC}as -m68000 --register-prefix-optional cart_md.s -o cart_md.o
+${TC}as -m68000 --register-prefix-optional $ASDEF cart_md.s -o cart_md.o
 ${TC}as -m68000 --register-prefix-optional "$D32/kos.s" -o kos.o
 ${TC}gcc -m68000 -Os -c -fomit-frame-pointer -fno-builtin-printf "$D32/scd.c" -o scd.o
 ${TC}gcc -T cart.ld -nostdlib -Wl,-Map=cart.map cart_md.o scd.o kos.o -lc -lgcc -o cart_md.elf
@@ -29,5 +36,5 @@ ${TC}objcopy -O binary -j .text -j .data cart_md.elf cart_md.bin
 echo "==> ROM"
 ROMDIR="$HERE/subcpu/ROMs"          # (on a Windows drive ROMs and ROMS are the same folder)
 [ -d "$ROMDIR" ] || ROMDIR="$HERE/subcpu/ROMS"
-python3 "$HERE/tools/make_cart.py" "$HERE/sh2/D32XR.32x" "$HERE/cart/cart_md.bin" "$ROMDIR" "$HERE/KOBO32X_CART.32x"
-echo "==> done: $HERE/KOBO32X_CART.32x - test in Fusion as a 32X cartridge, then on the EverDrive"
+python3 "$HERE/tools/make_cart.py" "$HERE/sh2/D32XR.32x" "$HERE/cart/cart_md.bin" "$ROMDIR" "$HERE/$OUT" $CARTOPT
+echo "==> done: $HERE/$OUT - test in Fusion as a 32X cartridge, then on the EverDrive"

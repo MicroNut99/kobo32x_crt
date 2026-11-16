@@ -4,20 +4,22 @@
 A standard Sega CD / 32XCD releases, 
 This version is engineered specifically to execute entirely from the real hardware or a standard Everdrive ROM cartridge.
 
-### v38: no Sega CD needed
-The cartridge now carries everything itself:
-- **Music in the ROM.** The three tracks (`subcpu/Track02-04.wav`, 115 s) are in the ROM as 8-bit mono samples
-  at 16,276 Hz (`KOBOMUS.BIN`, 1.86 MB) and are played by the 32X's PWM, mixed with the sound effects by the
-  second SH-2. With a Sega CD attached **and** the music disc in it, the CD plays the music as before; in every
-  other case (no Sega CD, no disc, another disc) the ROM's music plays.
+### One-off: `KOBO32X_STANDALONE.32x` - no Sega CD at all
+A second ROM beside the normal `KOBO32X_CART.32x` (which is unchanged). It is a plain 32X cartridge that carries
+everything itself, made for emulators and phones where running a Sega CD as well costs too much:
+- **Music in the ROM.** The three tracks (`subcpu/Track02-04.wav`, 115 s) as 8-bit mono samples at 16,276 Hz
+  (`subcpu/ROMs/KOBOMUS.BIN`, 1.86 MB), played by the 32X's PWM and mixed with the sound effects by the second
+  SH-2. If a Sega CD is attached **and** the music disc is in it, the CD plays the music instead.
 - **High scores and options are saved in the cartridge** (battery save RAM, 128 bytes at `0x200001`, ROM header
-  `RA`), reached the way Doom 32X Resurrection reaches its saves. An emulator or flash cart keeps it as it keeps
-  any cartridge's save. The options screen says
-  `SAVED IN CARTRIDGE`, or `NO SAVE RAM` where there is none (the scores then last for the session).
-- As a plain 32X cartridge it is also lighter to emulate than the Sega CD 32X version (no Sega CD to run).
+  `RA`), reached the way Doom 32X Resurrection reaches its saves. The options screen says `SAVED IN CARTRIDGE`, or
+  `NO SAVE RAM` where there is none.
+- **Its header does not ask for a Sega CD** (devices `J6`; the normal cartridge says `J6CM`, and ares reads that
+  `C` as "attach a Sega CD and ask for a disc"). Load it as a 32X game, with no disc.
 
-Checked in ares as a plain 32X cartridge (music, effects, options kept over a restart) and as cartridge +
-Sega CD + music disc (CD music). Not yet run on a console or in Fusion.
+Build it with `bash build_standalone.sh` (= `STANDALONE=1 bash build.sh`); the same sources, switched by
+`KOBO_STANDALONE` / `STANDALONE`. With the switch off the normal ROM comes out byte for byte as before.
+Checked in ares as a plain 32X cartridge: music, effects over it, music off / on, the credits' track, an option
+changed and still there after a restart. Not run on a console or in Fusion.
 
 ## Building
 
@@ -59,18 +61,17 @@ python3 tools/make_cart.py sh2/D32XR.32x cart/cart_md.bin subcpu/ROMs KOBO32X_CA
 |---|---|
 | `0x000000` | 32X boot block (`tools/mars_boot.bin`) |
 | `0x000800` | the 68000 program |
-| `0x008000` | the SH2 program (up to `0x020000`) |
-| `0x020000` | `KOBOMUS.BIN` (music, v38) |
-| `0x200000` | nothing, 64 KB: the save RAM answers here when it is switched in (`0xA130F1`) |
-| `0x210000` | `KOBOGFX.BIN` (graphics) |
+| `0x008000` | the SH2 program |
+| `0x200000` | `KOBOGFX.BIN` (graphics) |
 | `0x300000` | `IMAGE.RAW` (splash) |
-| `0x320000` | `KOBOSFX.BIN` (sound effects) |
+| `0x320000` | `KOBOSFX.BIN` (sound pack, for the Sega CD) |
 
-It also fills in the header (with the save RAM, `RA` `0x200001`-`0x203FFF`) and the checksum.
+It also fills in the header and checksum. With `--standalone` (the one-off above) the layout is: SH2 program up
+to `0x020000`, `KOBOMUS.BIN` at `0x020000`, nothing at `0x200000`-`0x20FFFF` (the save RAM answers there when it is
+switched in), `KOBOGFX.BIN` at `0x210000`, the rest as above; header with the save RAM and devices `J6`.
 
 ### The music disc (Sega CD, optional)
-The cartridge plays its music by itself (v38). With a Sega CD attached and this disc in it, the music comes
-from the CD instead (stereo, CD quality): **`KOBO32X_CART.cue` / `.bin`**, a data track
+With a Sega CD attached, the cartridge plays CD music from **`KOBO32X_CART.cue` / `.bin`**: a data track
 and Tracks 2-4. That disc is in the repository already. To make it again:
 ```bash
 python3 tools/make_mixed_cd2.py subcpu/CDROMPlayer.iso subcpu/Track02.wav subcpu/Track03.wav subcpu/Track04.wav --out KOBO32X_CART
@@ -86,6 +87,8 @@ There are no command-line switches for the game itself. These are `#define`s in 
 value, then rebuild.
 | Switch | Now | What it does |
 |---|---|---|
+| `KOBO_STANDALONE` | 0 | set by `build_standalone.sh` (`-DKOBO_STANDALONE=1`), not by hand: 1 = the one-off without a Sega CD (ROM music, cartridge saves) |
+| `KOBO_ROM_MUSIC` | 1 | standalone only: 1 = the ROM's music unless a Sega CD with the music disc is there; 2 = always the ROM's; 0 = CD only |
 | `KOBO_ROMCART` | 1 | **must be 1**: Kobo as a normal 32X cartridge, with its files in the ROM. The build scripts stop if it isn't |
 | `KOBO_NOCART` | 0 | cart mode: the graphics are read from the cartridge |
 | `KOBO_FIXED_STEP` | 0 | 0 = one game step per drawn frame. 1 = fixed step of `KOBO_STEP_MS`, the same speed at any frame rate |
@@ -94,14 +97,13 @@ value, then rebuild.
 | `TRACK02_SECONDS` | 60 | seconds of idle menu before the demo starts |
 | `KOBO_SPLASH` | 1 | 1 = `IMAGE.RAW` splash at start-up; 0 = none |
 | `KOBO_HW_PCM` | 1 | 1 = sound effects (sound pack into the Sega CD PCM chip, when there is one); 0 = off |
-| `KOBO_HW_BRAM` | 1 | 1 = high scores / options saved in the cartridge's save RAM (v38); 0 = this session only |
-| `KOBO_ROM_MUSIC` | 1 | 1 = the ROM's music unless a Sega CD with the music disc is there; 2 = always the ROM's; 0 = CD music only |
+| `KOBO_HW_BRAM` | 1 | 1 = high scores / options in backup RAM (Sega CD); 0 = this session only |
 | `KOBO_HW_DIAG` | 0 | 1 = hardware readout bottom-left (heartbeat, commands, pad requests, FPS) |
 | `KOBO_HW_QUIET` | 0 | test only: 1 = no pad requests once the game runs (no controller) |
 | `KOBO_DIAG_STRIP` | 0 | 0 = Kobo's right-hand panel; 1 = the diagnostic strip instead |
 | `KOBO_DIAG_GRID` | 0 | 1 = palette grid in place of the radar |
 | `KOBO_DEBUG_KEYS` | 0 | 1 = X (6-button pad) skips to the next level. 0 for a release |
-| `KOBO_VERSION` | 38 | the version shown on screen |
+| `KOBO_VERSION` | 37 | the version shown on screen |
 
 ### Asset tools (not part of the build; their outputs are already in `subcpu/ROMs/`)
 ```bash
@@ -111,8 +113,9 @@ python3 tools/kobo_music.py [Track02.wav Track03.wav Track04.wav] [--out subcpu/
 python3 tools/convert_32x_image.py picture.png [IMAGE.RAW] [--height 200] [--mode stretch|fit|fill] [--dither none|fs|bayer]
 python3 tools/convert_32x_image.py --decode IMAGE.RAW check.png       # preview a .raw
 ```
-`kobo_music.py` makes the ROM's music from the same WAVs as the disc (mono, 8-bit, the mixer's 16,276 Hz; each
-track as loud as its WAV, see the script). Run it again after changing a WAV, then `bash build.sh`.
+`kobo_music.py` makes the standalone ROM's music from the same WAVs as the disc (mono, 8-bit, the mixer's
+16,276 Hz; each track as loud as its WAV, see the script). Run it again after changing a WAV, then
+`bash build_standalone.sh`.
 
 These need `numpy` and `pillow` (`pip install numpy pillow`). `convert_32x_image.ps1` is the PowerShell
 version of the splash converter.
