@@ -12,9 +12,17 @@
 |     48  pad          COMM8 = pad bits, COMM10 = 68000 frame counter (Kobo's clock)
 |     52  text on/off  COMM2 = 1 on / 0 off (Genesis display; Kobo keeps it off)
 |     53  sound pack   COMM12 = 0: no sound effects        (C2: Sega CD PCM)
-|     56/59 backup RAM COMM12 = 0: "NO BACKUP RAM"         (C2: Sega CD backup RAM)
-|     57  BRAM word    COMM8 = 0
-|     45/54/58 and anything else: acknowledged             (C2: CD music)
+|     56  load the save   the cartridge's save RAM -> save_buf; COMM12 = 1 if the save RAM works   (K38)
+|     57  save word       COMM8 = save_buf word COMM2                                               (K38)
+|     58  save word       save_buf word COMM2 = COMM8                                               (K38)
+|     59  write the save  save_buf -> the save RAM, read back; COMM12 = 1 if it holds               (K38)
+|     60  hardware        COMM12 bit 0 = Sega CD attached, bit 1 = a disc with 4+ tracks in it,
+|                         bit 2 = drive not ready yet                                               (K38)
+|     45/54  CD music (C2), when a Sega CD is attached; anything else: acknowledged
+| K38 SAVE RAM: 128 bytes on the odd bytes from 0x200001 (ROM header "RA"), reached the way D32XR does
+| it: interrupts off, RV = 1 (the 68000 then sees the cartridge at 0 - and no longer at 0x880000, so
+| that routine runs from Genesis RAM: it is in .data), save RAM switched in with 0xA130F1 only for the
+| copy.  The SH2s must stay off the ROM meanwhile: Kobo parks its mixer before CMD 56 / 59.
 | Rules kept from the hardware work: COMM0 is polled with a pause between reads (never
 | hammered while the SH2 writes it), and read twice - acted on only if both reads match.
 | ===========================================================================================
@@ -106,6 +114,8 @@ main:
         bne.b   2b
         move.b  #0,0xA15107                     | RV off
         move.w  #0,0xA15104                     | cartridge bank 0
+        jsr     sram_off                        | K38: save RAM switched out (the SH2s are still in their
+                                                |      start-up wait: nothing reads the ROM yet)
         move.l  #0,COMM0
         move.l  #0,COMM4
 
@@ -133,50 +143,106 @@ loop:
         cmpi.b  #53,d1
         beq.b   c_zero12
         cmpi.b  #56,d1
-        beq.b   c_zero12
+        beq.w   c_load
         cmpi.b  #59,d1
-        beq.b   c_zero12
+        beq.w   c_save
         cmpi.b  #57,d1
-        beq.b   c_zero8
+        beq.w   c_getw
+        cmpi.b  #58,d1
+        beq.w   c_putw
+        cmpi.b  #60,d1
+        beq.w   c_hw
         cmpi.b  #45,d1
         beq.b   c_music
         cmpi.b  #54,d1
         beq.b   c_stop
-        bra.b   done                            | 58, anything else: acknowledge
+        bra.w   done                            | anything else: acknowledge
 
 c_pad:
         move.w  pad1,d2
         swap    d2
         move.w  ticks,d2
         move.l  d2,COMM8                        | COMM8 = pad, COMM10 = frame counter
-        bra.b   done
+        bra.w   done
 c_text:
         move.w  #0x8134,d2                      | off
         tst.w   COMM2
         beq.b   4f
         move.w  #0x8174,d2                      | on
 4:      move.w  d2,VDP_CTRL
-        bra.b   done
+        bra.w   done
 c_zero12:
         move.w  #0,COMM12                       | 0 = not available (no Sega CD yet)
-        bra.b   done
+        bra.w   done
 c_music:                                        | C2: CD audio track COMM2, repeating
         tst.w   cd_ok
-        beq.b   done
+        beq.w   done
         move.l  #1,-(sp)
         moveq   #0,d0
         move.w  COMM2,d0
         move.l  d0,-(sp)
         jsr     scd_play_cdda_track
         addq.l  #8,sp
-        bra.b   done
+        bra.w   done
 c_stop:
         tst.w   cd_ok
-        beq.b   done
+        beq.w   done
         jsr     scd_stop_cdda_playback
-        bra.b   done
-c_zero8:
-        move.w  #0,COMM8
+        bra.w   done
+
+| ---- K38: the save (cartridge save RAM) ------------------------------------------------------
+c_load:                                         | save RAM -> save_buf; COMM12 = 1 if the save RAM works
+        moveq   #0,d0
+        jsr     sram_io
+        moveq   #2,d0                           | does it keep a byte?  (the last one, put back after)
+        jsr     sram_io
+        move.w  d0,COMM12
+        bra.w   done
+c_save:                                         | save_buf -> save RAM, read back; COMM12 = 1 if equal
+        moveq   #1,d0
+        jsr     sram_io
+        move.w  d0,COMM12
+        bra.w   done
+c_getw:
+        bsr.b   save_word
+        move.w  (a0),COMM8
+        bra.w   done
+c_putw:
+        bsr.b   save_word
+        move.w  COMM8,(a0)
+        bra.w   done
+save_word:                                      | a0 -> save_buf word COMM2 (0..63)
+        move.w  COMM2,d0
+        andi.w  #63,d0
+        add.w   d0,d0
+        lea     save_buf,a0
+        adda.w  d0,a0
+        rts
+
+| ---- K38: what is attached -------------------------------------------------------------------
+c_hw:
+        moveq   #0,d2
+        tst.w   cd_ok
+        beq.b   3f
+        moveq   #1,d2                           | a Sega CD, its program running
+        jsr     scd_get_disc_info               | d0 = BIOS status word << 16 | first track << 8 | last track
+        tst.l   d0
+        bpl.b   1f
+        moveq   #5,d2                           | not ready yet
+        bra.b   3f
+1:      move.l  d0,d1
+        swap    d1
+        lsr.w   #8,d1                           | BIOS status, high byte
+        cmpi.b  #0x40,d1                        | tray open
+        beq.b   3f
+        cmpi.b  #0x10,d1                        | no disc
+        beq.b   3f
+        cmpi.b  #4,d0                           | last track
+        bcs.b   3f
+        cmpi.b  #100,d0
+        bcc.b   3f
+        moveq   #3,d2                           | the music disc (4 or more tracks)
+3:      move.w  d2,COMM12
 done:
         move.w  #0,COMM0                        | command finished
         bra     loop
@@ -276,12 +342,78 @@ Sub_Start:
         .incbin "cd.bin"
 Sub_End:
 
+| ---- K38: save RAM access - IN GENESIS RAM (.data is copied there at start): with RV = 1 the ROM
+|      this program runs from is not at 0x880000 any more ---------------------------------------
+|   d0 = 0  save RAM -> save_buf                      returns d0 = 1
+|   d0 = 1  save_buf -> save RAM, then compared       returns d0 = 1 if the save RAM holds it, else 0
+|   d0 = 2  test: the last byte inverted, read back, put back         d0 = 1 if it kept the change
+        .data
+        .even
+        .equ    SAVE_RAM,   0x200001            | odd bytes (ROM header: "RA", 0x200001-0x203FFF)
+        .equ    SAVE_BYTES, 128
+        .equ    RV_REG,     0xA15107            | bit 0 = RV
+        .equ    TIME_REG,   0xA130F1            | bit 0 = save RAM switched in, bit 1 = write-protected
+sram_io:
+        move.w  sr,-(sp)
+        move.w  #0x2700,sr                      | the interrupt handlers are in the ROM
+        lea     save_buf,a1
+        lea     SAVE_RAM,a0
+        move.w  #SAVE_BYTES-1,d2
+        moveq   #1,d1                           | the answer
+        bset    #0,RV_REG
+        cmpi.w  #1,d0
+        beq.b   2f
+        bhi.b   5f
+        move.b  #3,TIME_REG                     | switched in, write-protected
+1:      move.b  (a0),(a1)+
+        addq.l  #2,a0
+        dbra    d2,1b
+        bra.b   9f
+2:      move.b  #1,TIME_REG                     | switched in, writable
+3:      move.b  (a1)+,(a0)
+        addq.l  #2,a0
+        dbra    d2,3b
+        lea     save_buf,a1                     | read back
+        lea     SAVE_RAM,a0
+        move.w  #SAVE_BYTES-1,d2
+4:      move.b  (a0),d0
+        cmp.b   (a1)+,d0
+        beq.b   41f
+        moveq   #0,d1
+41:     addq.l  #2,a0
+        dbra    d2,4b
+        bra.b   9f
+5:      move.b  #1,TIME_REG                     | the test, on the last byte
+        lea     SAVE_RAM+(SAVE_BYTES-1)*2,a0
+        move.b  (a0),d2
+        move.b  d2,d0
+        not.b   d0
+        move.b  d0,(a0)
+        cmp.b   (a0),d0
+        beq.b   6f
+        moveq   #0,d1
+6:      move.b  d2,(a0)
+9:      move.b  #2,TIME_REG                     | switched out, write-protected
+        bclr    #0,RV_REG
+        move.l  d1,d0
+        move.w  (sp)+,sr
+        rts
+sram_off:                                       | at start: the save RAM out of the ROM's way (as D32XR)
+        move.w  sr,-(sp)
+        move.w  #0x2700,sr
+        bset    #0,RV_REG
+        move.b  #2,TIME_REG
+        bclr    #0,RV_REG
+        move.w  (sp)+,sr
+        rts
+
         .bss
         .align  2
         .global gen_lvl2, vblank_vector
 gen_lvl2:       .space  2
 cd_ok:          .space  2
 vblank_vector:  .space  4
+save_buf:       .space  128                     | K38: the save, as Kobo sends and reads it
 
         .text
         .global mystrlen, bump_fm, scd_init_pcm
