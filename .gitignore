@@ -1,0 +1,8 @@
+# what build.sh makes in cart/ (the 68000 program): rebuilt every time, never committed
+cart/cart.map
+cart/cart_md.bin
+cart/cart_md.elf
+cart/cart_md.o
+cart/cd.bin
+cart/kos.o
+cart/scd.o
